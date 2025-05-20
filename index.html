@@ -22,46 +22,54 @@
     }
 
     header {
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .header-logo {
       display: flex;
       align-items: center;
-      padding: 0.5rem 2rem;
-      backdrop-filter: blur(12px);
-      background-color: rgba(0, 0, 0, 0.6);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      justify-content: center;
+      gap: 0.75rem;
     }
 
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-right: auto;
+    .header-logo img {
+      height: 60px;
+      width: 60px;
     }
 
-    .logo-container img {
-      height: 40px;
-      width: 40px;
-    }
-
-    .logo-container span {
+    .header-logo span {
       font-family: 'Syne', sans-serif;
-      font-size: 1.25rem;
+      font-size: 1.75rem;
       color: #e50914;
-      font-weight: bold;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
 
     nav {
+      backdrop-filter: blur(8px);
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
       display: flex;
-      gap: 1rem;
+      justify-content: center;
       flex-wrap: wrap;
+      gap: 1rem;
     }
 
     nav a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
-      font-size: 0.95rem;
+      font-size: 1rem;
       text-transform: uppercase;
       transition: 0.3s;
     }
@@ -101,33 +109,69 @@
       box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
     }
 
+    .artist-card {
+      text-align: center;
+    }
+
+    .artist-card img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #e50914;
+      margin-bottom: 0.5rem;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .social-icons a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+
+    footer {
+      padding: 2rem;
+      background-color: #000;
+      text-align: center;
+    }
+
     .advisory-img {
       width: 100%;
-      max-width: 1140px;
-      border-radius: 0.75rem;
+      max-width: 1200px;
+      height: auto;
+      border-radius: 1rem;
       object-fit: cover;
       display: block;
       margin: 2rem auto;
-      box-shadow: 0 0 16px rgba(0, 0, 0, 0.6);
+    }
+
+    iframe.spotify {
+      max-width: 900px;
+      width: 100%;
+      display: block;
+      margin: 2rem auto;
+      border-radius: 12px;
     }
 
     @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      .logo-container {
-        margin-right: 0;
+      .header-logo span {
+        font-size: 1.25rem;
       }
 
       nav {
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
       }
 
       .gallery img, .gallery-row img {
         max-width: 100%;
+        aspect-ratio: 1 / 1;
       }
 
       .advisory-img {
