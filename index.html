@@ -21,6 +21,24 @@
       scroll-behavior: smooth;
     }
 
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60vh;
+      background: rgba(0, 0, 0, 0.75);
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: 5vw;
+      color: #e50914;
+      margin: 0;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 10px #000;
+    }
+
     nav {
       backdrop-filter: blur(8px);
       background-color: rgba(0, 0, 0, 0.7);
@@ -29,27 +47,26 @@
       top: 0;
       z-index: 10;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: center;
       flex-wrap: wrap;
+      gap: 1rem;
     }
 
     .logo {
+      height: 40px;
+      margin-right: 1rem;
+    }
+
+    .title {
       font-family: 'Syne', sans-serif;
-      font-size: 2rem;
       color: #e50914;
+      font-size: 1.5rem;
+      margin-right: auto;
       font-weight: bold;
-      margin-left: 1rem;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
+    nav a {
       color: #f0f0f0;
       text-decoration: none;
       font-weight: bold;
@@ -58,7 +75,7 @@
       transition: 0.3s;
     }
 
-    .nav-links a:hover {
+    nav a:hover {
       color: #e50914;
     }
 
@@ -82,10 +99,6 @@
       color: #fff;
       text-decoration: none;
       font-weight: bold;
-    }
-
-    header {
-      display: none;
     }
 
     section {
@@ -166,7 +179,7 @@
     }
 
     @media (max-width: 768px) {
-      .nav-links {
+      nav {
         display: none;
       }
 
@@ -185,17 +198,15 @@
 </head>
 <body>
   <nav>
-    <div class="logo">TOP TIER</div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <div class="nav-links" id="desktop-nav">
-      <a href="#musica">Producción Musical</a>
-      <a href="#visual">Producción Visual</a>
-      <a href="#asesoramiento">Asesoramiento</a>
-      <a href="#imagen">Imagen</a>
-      <a href="#artistas">Artistas</a>
-      <a href="#lanzamientos">Lanzamientos</a>
-      <a href="#contacto">Contacto</a>
-    </div>
+    <img src="img/top-tier-logo.png" alt="Top Tier Logo" class="logo">
+    <div class="title">TOP TIER</div>
+    <a href="#musica">Producción Musical</a>
+    <a href="#visual">Producción Visual</a>
+    <a href="#asesoramiento">Asesoramiento</a>
+    <a href="#imagen">Imagen</a>
+    <a href="#artistas">Artistas</a>
+    <a href="#lanzamientos">Lanzamientos</a>
+    <a href="#contacto">Contacto</a>
   </nav>
   <div class="mobile-nav" id="mobile-nav">
     <a href="#musica">Producción Musical</a>
