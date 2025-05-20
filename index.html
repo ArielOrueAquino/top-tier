@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Top Tier</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700&family=Rubik:wght@400;700&display=swap');
 
@@ -63,8 +64,30 @@
       color: #e50914;
     }
 
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 2rem;
+      color: #e50914;
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 1rem;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .mobile-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
     section {
-      padding: 5rem 2rem;
+      padding: 4rem 1.5rem;
       border-bottom: 1px solid #333;
       background-color: rgba(10, 10, 10, 0.9);
     }
@@ -81,12 +104,12 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 2rem;
+      gap: 1.5rem;
     }
 
     .gallery img, .gallery-row img {
       width: 100%;
-      max-width: 380px;
+      max-width: 360px;
       height: auto;
       border-radius: 0.75rem;
       object-fit: cover;
@@ -141,17 +164,27 @@
 
     @media (max-width: 768px) {
       nav {
-        flex-direction: column;
-        gap: 0.5rem;
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+        text-align: right;
+        padding: 1rem;
+      }
+
+      .gallery img, .gallery-row img {
+        max-width: 100%;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>TOP TIER</h1>
+    <h1 data-aos="zoom-in">TOP TIER</h1>
   </header>
-  <nav>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <nav id="main-nav">
     <a href="#musica">Producción Musical</a>
     <a href="#visual">Producción Visual</a>
     <a href="#asesoramiento">Asesoramiento</a>
@@ -160,6 +193,15 @@
     <a href="#lanzamientos">Lanzamientos</a>
     <a href="#contacto">Contacto</a>
   </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#musica">Producción Musical</a>
+    <a href="#visual">Producción Visual</a>
+    <a href="#asesoramiento">Asesoramiento</a>
+    <a href="#imagen">Imagen</a>
+    <a href="#artistas">Artistas</a>
+    <a href="#lanzamientos">Lanzamientos</a>
+    <a href="#contacto">Contacto</a>
+  </div>
 
   <section id="musica">
     <h2>Producción Musical</h2>
@@ -240,5 +282,14 @@
     </div>
     <p style="margin-top:1rem; font-size:0.85rem; color:#777;">&copy; 2025 Top Tier Music Inc.</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleMenu() {
+      const nav = document.getElementById("mobile-nav");
+      nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+    }
+  </script>
 </body>
 </html>
