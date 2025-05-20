@@ -4,79 +4,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Top Tier</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
-
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
       background-color: #0a0a0a;
-      background-image: url('img/top-tier.png');
-      background-attachment: fixed;
-      background-size: cover;
-      background-position: center;
       color: #f0f0f0;
+      background-image: url('top-tier.png');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
       scroll-behavior: smooth;
     }
-
     header {
-      background-color: rgba(0, 0, 0, 0.8);
       text-align: center;
-      padding: 2rem 1rem 1rem;
+      padding: 5rem 1rem 3rem;
     }
-
     header h1 {
       font-family: 'Rubik Mono One', sans-serif;
-      font-size: 3rem;
+      font-size: 4rem;
       color: #e50914;
       margin: 0;
     }
-
     nav {
-      background-color: #111;
+      background-color: rgba(0, 0, 0, 0.85);
       padding: 1rem;
       position: sticky;
       top: 0;
       z-index: 10;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
     }
-
     nav a {
       color: #f0f0f0;
-      margin: 0 1rem;
       text-decoration: none;
       font-weight: bold;
     }
-
     section {
       padding: 4rem 2rem;
       border-bottom: 1px solid #333;
+      background-color: rgba(10, 10, 10, 0.85);
     }
-
     h2 {
       color: #e50914;
       text-align: center;
     }
-
     .gallery, .gallery-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
       justify-content: center;
+      gap: 1rem;
     }
-
     .gallery img, .gallery-row img {
-      width: 100%;
-      max-width: 400px;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
       border-radius: 0.5rem;
     }
-
     .video {
       width: 100%;
       max-width: 800px;
       margin: auto;
     }
-
     .contact {
       display: flex;
       flex-direction: column;
@@ -84,24 +75,21 @@
       max-width: 400px;
       margin: auto;
     }
-
     .social-icons {
       display: flex;
       justify-content: center;
       gap: 1rem;
       padding: 1rem;
     }
-
     .social-icons a {
       color: #f0f0f0;
       text-decoration: none;
       font-size: 1.5rem;
     }
-
-    @media (max-width: 768px) {
-      .gallery img, .gallery-row img {
-        max-width: 100%;
-      }
+    footer {
+      padding: 2rem;
+      background-color: #000;
+      text-align: center;
     }
   </style>
 </head>
@@ -109,11 +97,11 @@
   <header>
     <h1>TOP TIER</h1>
   </header>
-
   <nav>
     <a href="#musica">Producción Musical</a>
     <a href="#visual">Producción Visual</a>
     <a href="#asesoramiento">Asesoramiento</a>
+    <a href="#imagen">Imagen</a>
     <a href="#contacto">Contacto</a>
   </nav>
 
@@ -121,7 +109,7 @@
     <h2>Producción Musical</h2>
     <p style="text-align:center;">Beats oscuros, grabación cruda, mezcla y mastering profesional. Sonido callejero con calidad de estudio.</p>
     <div class="gallery">
-      <img src="img/beats.png" alt="beats" />
+      <img src="beats.png" alt="beats" />
       <img src="img/img_102.png" alt="mezcla y master" />
       <img src="img/img_104.jpg" alt="home studio" />
     </div>
@@ -129,22 +117,32 @@
 
   <section id="visual">
     <h2>Producción Visual</h2>
-    <p style="text-align:center;">Rodajes urbanos, edición con estética cruda y efectos diseñados para impactar visualmente.</p>
+    <p style="text-align:center;">Rodajes profesionales, edición, FX, VFX, fotografía, animación y dirección de arte.</p>
     <div class="gallery">
-      <img src="img/img100.jpg" alt="Visual 1" />
-      <img src="img/img_106.png" alt="Visual 2" />
-      <img src="img/img_107.jpg" alt="Visual 3" />
+      <img src="img/img_103.jpg" alt="rodaje 1" />
+      <img src="img/img_106.jpg" alt="rodaje 2" />
     </div>
   </section>
 
   <section id="asesoramiento">
     <h2>Asesoramiento a Artistas</h2>
-    <p style="text-align:center;">Distribución, registros, marketing, derecho de autor y más. Te guiamos paso a paso.</p>
+    <p style="text-align:center;">Distribución musical, gestión de plataformas, ISRC, UPC, publishing, contratos y estrategias de marketing.</p>
     <div class="gallery">
-      <img src="img/asesoramiento.png" alt="Asesoramiento" />
+      <img src="img/img_105.jpg" alt="asesoramiento" />
     </div>
   </section>
-  <section id="artistas">
+
+  <section id="imagen">
+    <h2>Imagen</h2>
+    <p style="text-align:center;">Diseño de portadas, banners y flyers. Dejamos tres ejemplos usados en Spotify.</p>
+    <div class="gallery-row">
+      <img src="portada-1.jpg" alt="Portada 1" />
+      <img src="portada-2.jpg" alt="Portada 2" />
+      <img src="portada-3.jpg" alt="Portada 3" />
+    </div>
+  </section>
+  
+<section id="artistas">
     <h2>Artistas</h2>
     <div class="gallery-row">
       <div class="artist-card">
@@ -157,7 +155,7 @@
       </div>
     </div>
   </section>
-  
+
   <section id="lanzamientos">
     <h2>Lanzamientos</h2>
     <p style="text-align:center;">Escuchá nuestros últimos temas en Spotify, YouTube y más.</p>
