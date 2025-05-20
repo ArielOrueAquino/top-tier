@@ -21,50 +21,35 @@
       scroll-behavior: smooth;
     }
 
-    header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 45vh;
-      background: rgba(0, 0, 0, 0.65);
-      text-align: center;
-    }
-
-    header h1 {
-      font-family: 'Syne', sans-serif;
-      font-size: 8vw;
-      color: #e50914;
-      margin: 0;
-      letter-spacing: 2px;
-      text-shadow: 3px 3px 12px rgba(0,0,0,0.8);
-      animation: fadeInUp 1.5s ease-out;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
     nav {
-      backdrop-filter: blur(6px);
-      background-color: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      background-color: rgba(0, 0, 0, 0.7);
       padding: 1rem;
       position: sticky;
       top: 0;
       z-index: 10;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
-      gap: 1rem;
     }
 
-    nav a {
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      color: #e50914;
+      font-weight: bold;
+      margin-left: 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
       color: #f0f0f0;
       text-decoration: none;
       font-weight: bold;
@@ -73,7 +58,7 @@
       transition: 0.3s;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       color: #e50914;
     }
 
@@ -97,6 +82,10 @@
       color: #fff;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    header {
+      display: none;
     }
 
     section {
@@ -177,7 +166,7 @@
     }
 
     @media (max-width: 768px) {
-      nav {
+      .nav-links {
         display: none;
       }
 
@@ -191,26 +180,22 @@
         max-width: 100%;
         aspect-ratio: 1 / 1;
       }
-
-      header h1 {
-        font-size: 12vw;
-      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1 data-aos="zoom-in">TOP TIER</h1>
-  </header>
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  <nav id="main-nav">
-    <a href="#musica">Producción Musical</a>
-    <a href="#visual">Producción Visual</a>
-    <a href="#asesoramiento">Asesoramiento</a>
-    <a href="#imagen">Imagen</a>
-    <a href="#artistas">Artistas</a>
-    <a href="#lanzamientos">Lanzamientos</a>
-    <a href="#contacto">Contacto</a>
+  <nav>
+    <div class="logo">TOP TIER</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="desktop-nav">
+      <a href="#musica">Producción Musical</a>
+      <a href="#visual">Producción Visual</a>
+      <a href="#asesoramiento">Asesoramiento</a>
+      <a href="#imagen">Imagen</a>
+      <a href="#artistas">Artistas</a>
+      <a href="#lanzamientos">Lanzamientos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
   </nav>
   <div class="mobile-nav" id="mobile-nav">
     <a href="#musica">Producción Musical</a>
