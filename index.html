@@ -23,16 +23,29 @@
 
     header {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 60vh;
+      height: 50vh;
       background: rgba(0, 0, 0, 0.75);
       text-align: center;
     }
 
-    header h1 {
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .logo-container img {
+      width: 64px;
+      height: auto;
+    }
+
+    .logo-container h1 {
       font-family: 'Syne', sans-serif;
-      font-size: 6vw;
+      font-size: 2.5rem;
       color: #e50914;
       margin: 0;
       letter-spacing: 2px;
@@ -164,19 +177,6 @@
       text-align: center;
     }
 
-    .advice-section {
-      text-align: center;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .advice-section img {
-      width: 100%;
-      max-width: 480px;
-      border-radius: 12px;
-      margin-top: 2rem;
-    }
-
     @media (max-width: 768px) {
       nav {
         display: none;
@@ -191,6 +191,18 @@
       .gallery img, .gallery-row img {
         max-width: 100%;
         aspect-ratio: 1 / 1;
+      }
+
+      .logo-container {
+        flex-direction: column;
+      }
+
+      .logo-container img {
+        width: 48px;
+      }
+
+      .logo-container h1 {
+        font-size: 1.8rem;
       }
     }
   </style>
