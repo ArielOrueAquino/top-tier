@@ -4,31 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Top Tier</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
   <style>
+    @font-face {
+      font-family: 'Opium';
+      src: url('https://fonts.cdnfonts.com/s/107008/Opium.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #0a0a0a;
       color: #f0f0f0;
-      background-image: url('top-tier.png');
+      background-image: url('img/top-tier.png');
       background-size: cover;
       background-attachment: fixed;
       background-position: center;
       scroll-behavior: smooth;
     }
+
     header {
       text-align: center;
-      padding: 5rem 1rem 3rem;
+      padding: 4rem 1rem 2rem;
     }
     header h1 {
-      font-family: 'Rubik Mono One', sans-serif;
+      font-family: 'Opium', sans-serif;
       font-size: 4rem;
       color: #e50914;
       margin: 0;
+      text-shadow: 2px 2px 6px black;
     }
+
     nav {
-      background-color: rgba(0, 0, 0, 0.85);
+      background-color: rgba(0, 0, 0, 0.75);
       padding: 1rem;
       position: sticky;
       top: 0;
@@ -37,37 +46,53 @@
       justify-content: center;
       gap: 2rem;
     }
+
     nav a {
       color: #f0f0f0;
       text-decoration: none;
       font-weight: bold;
+      font-family: 'Rubik Mono One', sans-serif;
+      font-size: 0.9rem;
+      transition: color 0.3s;
     }
+
+    nav a:hover {
+      color: #e50914;
+    }
+
     section {
       padding: 4rem 2rem;
       border-bottom: 1px solid #333;
       background-color: rgba(10, 10, 10, 0.85);
     }
+
     h2 {
       color: #e50914;
       text-align: center;
+      font-family: 'Opium', sans-serif;
     }
+
     .gallery, .gallery-row {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
     }
+
     .gallery img, .gallery-row img {
-      max-width: 100%;
+      max-width: 400px;
+      width: 100%;
       height: auto;
       object-fit: contain;
       border-radius: 0.5rem;
     }
+
     .video {
       width: 100%;
       max-width: 800px;
       margin: auto;
     }
+
     .contact {
       display: flex;
       flex-direction: column;
@@ -75,21 +100,31 @@
       max-width: 400px;
       margin: auto;
     }
+
     .social-icons {
       display: flex;
       justify-content: center;
       gap: 1rem;
       padding: 1rem;
     }
+
     .social-icons a {
       color: #f0f0f0;
       text-decoration: none;
       font-size: 1.5rem;
     }
+
     footer {
       padding: 2rem;
       background-color: #000;
       text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
     }
   </style>
 </head>
@@ -109,7 +144,7 @@
     <h2>Producción Musical</h2>
     <p style="text-align:center;">Beats oscuros, grabación cruda, mezcla y mastering profesional. Sonido callejero con calidad de estudio.</p>
     <div class="gallery">
-      <img src="beats.png" alt="beats" />
+      <img src="img/beats.png" alt="beats" />
       <img src="img/img_102.png" alt="mezcla y master" />
       <img src="img/img_104.jpg" alt="home studio" />
     </div>
@@ -136,13 +171,13 @@
     <h2>Imagen</h2>
     <p style="text-align:center;">Diseño de portadas, banners y flyers. Dejamos tres ejemplos usados en Spotify.</p>
     <div class="gallery-row">
-      <img src="portada-1.jpg" alt="Portada 1" />
-      <img src="portada-2.jpg" alt="Portada 2" />
-      <img src="portada-3.jpg" alt="Portada 3" />
+      <img src="img/portada-1.jpg" alt="Portada 1" />
+      <img src="img/portada-2.jpg" alt="Portada 2" />
+      <img srcimg/portada-3.jpg" alt="Portada 3" />
     </div>
   </section>
-  
-<section id="artistas">
+
+  <section id="artistas">
     <h2>Artistas</h2>
     <div class="gallery-row">
       <div class="artist-card">
@@ -163,7 +198,7 @@
       <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6rqhFgbbKwnb9MLmUQDhG6?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
   </section>
-  
+
   <section id="contacto">
     <h2>Contacto</h2>
     <form class="contact">
