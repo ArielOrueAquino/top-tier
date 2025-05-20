@@ -1,0 +1,5 @@
+[[redirects]]
+from = "https://toptiermusic.netlify.app/*"
+to = "https://www.toptier.com.ar/:splat"
+status = 301
+force = true
