@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "/*"
-  to = "https://www.toptier.com.ar/:splat"
-  status = 301
-  force = true
