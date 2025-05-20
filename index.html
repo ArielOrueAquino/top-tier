@@ -196,15 +196,49 @@
         align-items: center;
       }
     }
-  </style>
+  
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      background: none;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.95);
+        padding: 1rem 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 999;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+    }
+
+</style>
 </head>
 <body>
   <div class="top-bar">
     <div class="logo-container">
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
       <img src="img/top-logo.png" alt="Top Tier logo">
       <span>TOP TIER</span>
     </div>
-    <nav>
+    <nav id="main-nav" class="nav-links">
       <a href="#musica">Producción Musical</a>
       <a href="#audiovisual">Producción Visual</a>
       <a href="#imagen">Imagen</a>
@@ -298,6 +332,15 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleMenu() {
+      const nav = document.getElementById("main-nav");
+      nav.classList.toggle("show");
+    }
   </script>
 </body>
 </html>
