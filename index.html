@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top Tier</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #0a0a0a;
+      background-image: url('top-tier.png');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      color: #f0f0f0;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+
+    header h1 {
+      font-family: 'Rubik Mono One', sans-serif;
+      font-size: 3rem;
+      color: #e50914;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #111;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      text-align: center;
+    }
+
+    nav a {
+      color: #f0f0f0;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      border-bottom: 1px solid #333;
+    }
+
+    h2 {
+      color: #e50914;
+      text-align: center;
+    }
+
+    .gallery, .gallery-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .gallery img, .gallery-row img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 0.5rem;
+    }
+
+    .video {
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .social-icons a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .gallery img, .gallery-row img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TOP TIER</h1>
+  </header>
+
+  <nav>
+    <a href="#musica">Producción Musical</a>
+    <a href="#visual">Producción Visual</a>
+    <a href="#asesoramiento">Asesoramiento</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="musica">
+    <h2>Producción Musical</h2>
+    <p style="text-align:center;">Beats oscuros, grabación cruda, mezcla y mastering profesional. Sonido callejero con calidad de estudio.</p>
+    <div class="gallery">
+      <img src="beats.png" alt="beats" />
+      <img src="img/img_102.png" alt="mezcla y master" />
+      <img src="img/img_104.jpg" alt="home studio" />
+    </div>
+  </section>
+
+  <section id="visual">
+    <h2>Producción Visual</h2>
+    <p style="text-align:center;">Rodajes urbanos, edición con estética cruda y efectos diseñados para impactar visualmente.</p>
+    <div class="gallery">
+      <img src="imagen-produccion-visual-3.jpg" alt="Visual 1" />
+      <img src="edicion-vídeo.jpg" alt="Visual 2" />
+      <img src="audiovisual.png" alt="Visual 3" />
+    </div>
+  </section>
+
+  <section id="asesoramiento">
+    <h2>Asesoramiento a Artistas</h2>
+    <p style="text-align:center;">Distribución, registros, marketing, derecho de autor y más. Te guiamos paso a paso.</p>
+    <div class="gallery">
+      <img src="img/asesoramiento.png" alt="Asesoramiento" />
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form class="contact">
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu correo electrónico" required />
+      <textarea placeholder="Tu consulta" rows="5"></textarea>
+      <button type="submit">Enviar</button>
+      <a href="https://wa.me/5491132454848" style="color:#25D366; text-align:center;">O chateá por WhatsApp</a>
+    </form>
+  </section>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://instagram.com/toptier" target="_blank">IG</a>
+      <a href="https://facebook.com/toptier" target="_blank">FB</a>
+      <a href="https://wa.me/5491132454848" target="_blank">WhatsApp</a>
+    </div>
+  </footer>
+</body>
+</html>
