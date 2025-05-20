@@ -22,47 +22,43 @@
     }
 
     header {
-      height: auto;
-      background: rgba(0, 0, 0, 0.8);
       display: flex;
+      justify-content: center;
       align-items: center;
-      justify-content: space-between;
-      padding: 0.5rem 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 999;
+      height: 60vh;
+      background: rgba(0, 0, 0, 0.75);
+      text-align: center;
     }
 
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .logo-container img {
-      width: 48px;
-      height: 48px;
-    }
-
-    .logo-container span {
+    header h1 {
       font-family: 'Syne', sans-serif;
-      font-size: 1.5rem;
-      font-weight: bold;
+      font-size: 6vw;
       color: #e50914;
+      margin: 0;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 10px #000;
     }
 
     nav {
+      backdrop-filter: blur(8px);
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
       display: flex;
-      gap: 1rem;
+      justify-content: center;
       flex-wrap: wrap;
+      gap: 1rem;
     }
 
     nav a {
       color: #f0f0f0;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1rem;
       text-transform: uppercase;
-      font-size: 0.9rem;
+      transition: 0.3s;
     }
 
     nav a:hover {
@@ -71,18 +67,17 @@
 
     .menu-toggle {
       display: none;
+      cursor: pointer;
       font-size: 2rem;
       color: #e50914;
-      background: none;
-      border: none;
     }
 
     .mobile-nav {
       display: none;
       flex-direction: column;
-      gap: 1rem;
-      background-color: rgba(0, 0, 0, 0.9);
+      background: rgba(0, 0, 0, 0.8);
       padding: 1rem;
+      gap: 1rem;
       text-align: center;
     }
 
@@ -176,10 +171,13 @@
 
       .menu-toggle {
         display: block;
+        text-align: right;
+        padding: 1rem;
       }
 
-      .mobile-nav {
-        display: flex;
+      .gallery img, .gallery-row img {
+        max-width: 100%;
+        aspect-ratio: 1 / 1;
       }
     }
   </style>
@@ -239,10 +237,10 @@
   </section>
 
   <section id="asesoramiento">
-    <h2>Asesoramiento a Artistas</h2>
-    <p style="text-align:center;">Distribución musical, gestión de plataformas, ISRC, UPC, publishing, contratos y estrategias de marketing.</p>
+    <h2>Asesoramiento</h2>
+    <p style="text-align:center; max-width: 600px; margin: auto;">Ayudamos a los artistas a comprender el funcionamiento de las plataformas, estrategias de marketing, distribución y aspectos legales.</p>
     <div class="gallery">
-      <img src="img/asesoramiento.png" alt="asesoramiento" />
+      <img src="img/asesoria.png" alt="Asesoramiento" />
     </div>
   </section>
 
