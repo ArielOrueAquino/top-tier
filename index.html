@@ -19,43 +19,18 @@
       background-repeat: no-repeat;
       scroll-behavior: smooth;
     }
-    nav {
-      backdrop-filter: blur(8px);
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-      text-transform: uppercase;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      color: #e50914;
-    }
     header {
-      height: 100vh;
+      min-height: 60vh;
       background: rgba(0, 0, 0, 0.6);
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-      text-align: center;
+      justify-content: center;
+      padding: 2rem 1rem;
     }
     .header-logo {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      justify-content: center;
+      gap: 1rem;
     }
     .header-logo img {
       height: 60px;
@@ -66,6 +41,28 @@
       font-size: 2rem;
       color: #e50914;
       font-weight: 700;
+    }
+    nav {
+      backdrop-filter: blur(8px);
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+    nav a:hover {
+      color: #e50914;
     }
     section {
       padding: 4rem 1.5rem;
@@ -79,32 +76,19 @@
       font-size: 2rem;
       margin-bottom: 2rem;
     }
-    .gallery,
-    .gallery-row {
+    .gallery, .gallery-row {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 1.5rem;
     }
-    .gallery img,
-    .gallery-row img {
+    .gallery img, .gallery-row img {
       width: 100%;
       max-width: 360px;
-      height: auto;
       aspect-ratio: 1 / 1;
       border-radius: 0.75rem;
       object-fit: cover;
       box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
-    }
-    .advisory-img {
-      width: 100%;
-      max-width: 1200px;
-      height: auto;
-      aspect-ratio: 3 / 1;
-      border-radius: 1rem;
-      object-fit: cover;
-      display: block;
-      margin: 2rem auto;
     }
     .artist-card {
       text-align: center;
@@ -112,42 +96,61 @@
     .artist-card img {
       width: 180px;
       height: 180px;
-      object-fit: cover;
       border-radius: 50%;
       border: 3px solid #e50914;
-      margin-bottom: 0.5rem;
+      object-fit: cover;
+    }
+    .advisory-img {
+      width: 100%;
+      max-width: 1200px;
+      aspect-ratio: 3 / 1;
+      border-radius: 1rem;
+      object-fit: cover;
+      display: block;
+      margin: 2rem auto;
+    }
+    .contact {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .contact input, .contact textarea, .contact button {
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 0.5rem;
+      border: none;
+    }
+    .contact button {
+      background-color: #e50914;
+      color: white;
+      cursor: pointer;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+    .social-icons a {
+      font-size: 1.5rem;
+      color: #f0f0f0;
     }
     footer {
       padding: 2rem;
       background-color: #000;
       text-align: center;
     }
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      padding: 1rem;
-    }
-    .social-icons a {
-      color: #f0f0f0;
-      text-decoration: none;
-      font-size: 1.5rem;
-    }
     @media (max-width: 768px) {
-      nav {
+      .header-logo {
         flex-direction: column;
-        align-items: center;
       }
       .header-logo span {
         font-size: 1.5rem;
       }
-      .gallery img,
-      .gallery-row img {
-        max-width: 100%;
-      }
-      .advisory-img {
-        width: 95%;
-        aspect-ratio: auto;
+      nav {
+        flex-direction: column;
       }
     }
   </style>
@@ -155,7 +158,7 @@
 <body>
   <header>
     <div class="header-logo">
-      <img src="img/logo.png" alt="Top Tier logo">
+      <img src="img/logo.png" alt="Top Tier logo" />
       <span>TOP TIER</span>
     </div>
   </header>
@@ -172,43 +175,43 @@
     <h2>Producción Musical</h2>
     <p style="text-align:center;">Beats oscuros, grabación cruda, mezcla y mastering profesional. Sonido callejero con calidad de estudio.</p>
     <div class="gallery">
-      <img src="img/prod-1.png" alt="beats">
-      <img src="img/prod-2.png" alt="mezcla y master">
-      <img src="img/prod-3.jpg" alt="home studio">
+      <img src="img/prod-1.png" alt="producción 1" />
+      <img src="img/prod-2.png" alt="producción 2" />
+      <img src="img/prod-3.jpg" alt="producción 3" />
     </div>
   </section>
   <section id="audiovisual">
     <h2>Producción Visual</h2>
     <p style="text-align:center;">Rodajes profesionales, edición, FX, VFX, fotografía, animación y dirección de arte.</p>
     <div class="gallery">
-      <img src="img/video-1.jpeg" alt="rodaje 1">
-      <img src="img/video-2.jpg" alt="edición video">
-      <img src="img/video-3.png" alt="dirección de arte">
+      <img src="img/video-1.jpeg" alt="video 1" />
+      <img src="img/video-2.jpg" alt="video 2" />
+      <img src="img/video-3.png" alt="video 3" />
     </div>
   </section>
   <section id="asesoramiento">
     <h2>Asesoramiento</h2>
     <p style="text-align:center; max-width: 600px; margin: auto;">Ayudamos a los artistas a comprender el funcionamiento de las plataformas, estrategias de marketing, distribución y aspectos legales.</p>
-    <img class="advisory-img" src="img/asesoria.png" alt="Asesoramiento" />
+    <img src="img/asesoria.png" alt="asesoria" class="advisory-img" />
   </section>
   <section id="imagen">
     <h2>Imagen</h2>
     <p style="text-align:center;">Diseño de portadas, banners y flyers. Dejamos tres ejemplos usados en Spotify.</p>
     <div class="gallery-row">
-      <img src="img/portada-1.jpg" alt="Portada 1">
-      <img src="img/portada-2.jpg" alt="Portada 2">
-      <img src="img/portada-3.jpg" alt="Portada 3">
+      <img src="img/portada-1.jpg" alt="portada 1" />
+      <img src="img/portada-2.jpg" alt="portada 2" />
+      <img src="img/portada-3.jpg" alt="portada 3" />
     </div>
   </section>
   <section id="artistas">
     <h2>Artistas</h2>
     <div class="gallery-row">
       <div class="artist-card">
-        <img src="img/waizr.png" alt="wa!zr">
+        <img src="img/waizr.png" alt="waizr" />
         <div>wa!zr</div>
       </div>
       <div class="artist-card">
-        <img src="img/eztre.png" alt="eztrerightnow">
+        <img src="img/eztre.png" alt="eztrerightnow" />
         <div>eztrerightnow</div>
       </div>
     </div>
@@ -216,16 +219,14 @@
   <section id="lanzamientos">
     <h2>Lanzamientos</h2>
     <p style="text-align:center;">Escuchá nuestras playlists en Spotify y descubrí los últimos lanzamientos.</p>
-    <div class="video">
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3cnOXctq1b9MRQtJKg635E?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3cnOXctq1b9MRQtJKg635E?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </section>
   <section id="contacto">
     <h2>Contacto</h2>
     <form class="contact">
       <input type="text" placeholder="Tu nombre" required />
       <input type="email" placeholder="Tu correo electrónico" required />
-      <textarea placeholder="Tu consulta" rows="5"></textarea>
+      <textarea rows="5" placeholder="Tu consulta"></textarea>
       <button type="submit">Enviar</button>
       <a href="https://wa.me/5491132454848" style="color:#25D366; text-align:center;">O chateá por WhatsApp</a>
     </form>
@@ -241,10 +242,6 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
-    function toggleMenu() {
-      const nav = document.getElementById("mobile-nav");
-      nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-    }
   </script>
 </body>
 </html>
