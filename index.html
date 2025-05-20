@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top Tier</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0a0a0a;
+      color: #f0f0f0;
+      scroll-behavior: smooth;
+      background-image: url('img/top-tier.png');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
+    nav {
+      background-color: #111;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    nav a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    header {
+      height: 60vh;
+      background: url('img/top-tier.png') no-repeat center center;
+      background-size: cover;
+    }
+    section {
+      padding: 4rem 2rem;
+      border-bottom: 1px solid #333;
+    }
+    h2 {
+      color: #e50914;
+      text-align: center;
+    }
+    .gallery, .gallery-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .gallery img, .gallery-row img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 0.5rem;
+      object-fit: cover;
+      box-shadow: 0 0 10px #000;
+    }
+    .video {
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+    }
+    .contact {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 400px;
+      margin: auto;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .social-icons a {
+      color: #f0f0f0;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header></header>
+
+  <nav>
+    <a href="#musica">Producción Musical</a>
+    <a href="#visual">Producción Visual</a>
+    <a href="#asesoramiento">Asesoramiento</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="musica">
+    <h2>Producción Musical</h2>
+    <p style="text-align:center;">Beats oscuros, grabación cruda, mezcla y mastering profesional. Sonido callejero con calidad de estudio.</p>
+    <div class="gallery">
+      <img src="img/beats.png" alt="beats" />
+      <img src="img/img_102.png" alt="mezcla y master" />
+      <img src="img/img_104.jpg" alt="home studio" />
+    </div>
+  </section>
+
+  <section id="visual">
+    <h2>Producción Visual</h2>
+    <p style="text-align:center;">Videoclips, edición FX, filmación y concepto visual. Desde el rodaje hasta el estreno.</p>
+    <div class="gallery">
+      <img src="img/audiovisual.png" alt="Audiovisual 1" />
+      <img src="img/edicion-video.jpg" alt="Edición FX" />
+      <img src="img/imagen-produccion-visual-3.jpg" alt="Producción Visual" />
+    </div>
+  </section>
+
+  <section id="asesoramiento">
+    <h2>Asesoramiento a Artistas</h2>
+    <p style="text-align:center;">Distribución digital, derechos, publishing y marketing. Te guiamos para que crezcas sin vender tu alma.</p>
+    <div class="gallery">
+      <img src="img/asesoramiento.png" alt="Distribución y asesoramiento" />
+    </div>
+  </section>
+
+  <section id="imagen">
+    <h2>Imagen</h2>
+    <p style="text-align:center;">Diseño de portadas, banners y flyers. Dejamos tres ejemplos usados en Spotify.</p>
+    <div class="gallery-row">
+      <img src="img/portada-1.jpg" alt="Portada 1" />
+      <img src="img/portada-2.jpg" alt="Portada 2" />
+      <img src="img/portada-3.jpg" alt="Portada 3" />
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form class="contact">
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu correo electrónico" required />
+      <textarea placeholder="Tu consulta" rows="5"></textarea>
+      <button type="submit">Enviar</button>
+      <a href="https://wa.me/549X1132454848" style="color:#25D366; text-align:center;">O chateá por WhatsApp</a>
+    </form>
+  </section>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://instagram.com/toptier" target="_blank">IG</a>
+      <a href="https://facebook.com/toptier" target="_blank">FB</a>
+      <a href="https://wa.me/5491132454848" target="_blank">WhatsApp</a>
+    </div>
+  </footer>
+</body>
+</html>
