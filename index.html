@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700&family=Rubik:wght@400;700&display=swap');
-
     body {
       margin: 0;
       font-family: 'Rubik', sans-serif;
@@ -20,38 +19,6 @@
       background-repeat: no-repeat;
       scroll-behavior: smooth;
     }
-
-    header {
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.6);
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .header-logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-    }
-
-    .header-logo img {
-      height: 60px;
-      width: 60px;
-    }
-
-    .header-logo span {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.75rem;
-      color: #e50914;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
     nav {
       backdrop-filter: blur(8px);
       background-color: rgba(0, 0, 0, 0.8);
@@ -64,7 +31,6 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
-
     nav a {
       color: #fff;
       text-decoration: none;
@@ -73,17 +39,39 @@
       text-transform: uppercase;
       transition: 0.3s;
     }
-
     nav a:hover {
       color: #e50914;
     }
-
+    header {
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+    .header-logo img {
+      height: 60px;
+      width: 60px;
+    }
+    .header-logo span {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      color: #e50914;
+      font-weight: 700;
+    }
     section {
       padding: 4rem 1.5rem;
       border-bottom: 1px solid #333;
       background-color: rgba(10, 10, 10, 0.9);
     }
-
     h2 {
       color: #e50914;
       text-align: center;
@@ -91,15 +79,15 @@
       font-size: 2rem;
       margin-bottom: 2rem;
     }
-
-    .gallery, .gallery-row {
+    .gallery,
+    .gallery-row {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 1.5rem;
     }
-
-    .gallery img, .gallery-row img {
+    .gallery img,
+    .gallery-row img {
       width: 100%;
       max-width: 360px;
       height: auto;
@@ -108,11 +96,19 @@
       object-fit: cover;
       box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
     }
-
+    .advisory-img {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      aspect-ratio: 3 / 1;
+      border-radius: 1rem;
+      object-fit: cover;
+      display: block;
+      margin: 2rem auto;
+    }
     .artist-card {
       text-align: center;
     }
-
     .artist-card img {
       width: 180px;
       height: 180px;
@@ -121,176 +117,109 @@
       border: 3px solid #e50914;
       margin-bottom: 0.5rem;
     }
-
+    footer {
+      padding: 2rem;
+      background-color: #000;
+      text-align: center;
+    }
     .social-icons {
       display: flex;
       justify-content: center;
       gap: 1rem;
       padding: 1rem;
     }
-
     .social-icons a {
       color: #f0f0f0;
       text-decoration: none;
       font-size: 1.5rem;
     }
-
-    footer {
-      padding: 2rem;
-      background-color: #000;
-      text-align: center;
-    }
-
-    .advisory-img {
-      width: 100%;
-      max-width: 1200px;
-      height: auto;
-      border-radius: 1rem;
-      object-fit: cover;
-      display: block;
-      margin: 2rem auto;
-    }
-
-    iframe.spotify {
-      max-width: 900px;
-      width: 100%;
-      display: block;
-      margin: 2rem auto;
-      border-radius: 12px;
-    }
-
     @media (max-width: 768px) {
-      .header-logo span {
-        font-size: 1.25rem;
-      }
-
       nav {
         flex-direction: column;
         align-items: center;
       }
-
-      .gallery img, .gallery-row img {
-        max-width: 100%;
-        aspect-ratio: 1 / 1;
+      .header-logo span {
+        font-size: 1.5rem;
       }
-
+      .gallery img,
+      .gallery-row img {
+        max-width: 100%;
+      }
       .advisory-img {
         width: 95%;
+        aspect-ratio: auto;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo-container">
-      <img src="img/logo-toptier.png" alt="Logo Top Tier" />
+    <div class="header-logo">
+      <img src="img/logo.png" alt="Top Tier logo">
       <span>TOP TIER</span>
     </div>
-    <nav>
-      <a href="#musica">Producción Musical</a>
-      <a href="#visual">Producción Visual</a>
-      <a href="#asesoramiento">Asesoramiento</a>
-      <a href="#imagen">Imagen</a>
-      <a href="#artistas">Artistas</a>
-      <a href="#lanzamientos">Lanzamientos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
   </header>
-<body>
-  <header>
-    <div class="logo-container">
-      <img src="img/top-logo.png" alt="Logo Top Tier" />
-      <span>TOP TIER</span>
-    </div>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <nav class="desktop-nav">
-      <a href="#musica">Producción Musical</a>
-      <a href="#visual">Producción Visual</a>
-      <a href="#asesoramiento">Asesoramiento</a>
-      <a href="#imagen">Imagen</a>
-      <a href="#artistas">Artistas</a>
-      <a href="#lanzamientos">Lanzamientos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
-  <div class="mobile-nav" id="mobile-nav">
+  <nav>
     <a href="#musica">Producción Musical</a>
-    <a href="#visual">Producción Visual</a>
-    <a href="#asesoramiento">Asesoramiento</a>
+    <a href="#audiovisual">Producción Visual</a>
     <a href="#imagen">Imagen</a>
+    <a href="#asesoramiento">Asesoramiento</a>
     <a href="#artistas">Artistas</a>
     <a href="#lanzamientos">Lanzamientos</a>
     <a href="#contacto">Contacto</a>
-  </div>
-
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById("mobile-nav");
-      nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-    }
-  </script>
-
+  </nav>
   <section id="musica">
     <h2>Producción Musical</h2>
     <p style="text-align:center;">Beats oscuros, grabación cruda, mezcla y mastering profesional. Sonido callejero con calidad de estudio.</p>
     <div class="gallery">
-      <img src="img/prod-1.png" alt="beats" />
-      <img src="img/prod-2.png" alt="mezcla y master" />
-      <img src="img/prod-3.jpg" alt="home studio" />
+      <img src="img/prod-1.png" alt="beats">
+      <img src="img/prod-2.png" alt="mezcla y master">
+      <img src="img/prod-3.jpg" alt="home studio">
     </div>
   </section>
-
-  <section id="visual">
+  <section id="audiovisual">
     <h2>Producción Visual</h2>
     <p style="text-align:center;">Rodajes profesionales, edición, FX, VFX, fotografía, animación y dirección de arte.</p>
     <div class="gallery">
-      <img src="img/video-1.jpeg" alt="rodaje 1" />
-      <img src="img/video-2.jpg" alt="edición video" />
-      <img src="img/video-3.png" alt="dirección de arte" />
+      <img src="img/video-1.jpeg" alt="rodaje 1">
+      <img src="img/video-2.jpg" alt="edición video">
+      <img src="img/video-3.png" alt="dirección de arte">
     </div>
   </section>
-
   <section id="asesoramiento">
     <h2>Asesoramiento</h2>
-    <p style="text-align:center; max-width: 600px; margin: auto;">
-      Ayudamos a los artistas a comprender el funcionamiento de las plataformas,
-      estrategias de marketing, distribución y aspectos legales.
-    </p>
-    <img src="img/asesoria.png" alt="Asesoramiento" class="advisory-img" />
+    <p style="text-align:center; max-width: 600px; margin: auto;">Ayudamos a los artistas a comprender el funcionamiento de las plataformas, estrategias de marketing, distribución y aspectos legales.</p>
+    <img class="advisory-img" src="img/asesoria.png" alt="Asesoramiento" />
   </section>
-
   <section id="imagen">
     <h2>Imagen</h2>
     <p style="text-align:center;">Diseño de portadas, banners y flyers. Dejamos tres ejemplos usados en Spotify.</p>
     <div class="gallery-row">
-      <img src="img/portada-1.jpg" alt="Portada 1" />
-      <img src="img/portada-2.jpg" alt="Portada 2" />
-      <img src="img/portada-3.jpg" alt="Portada 3" />
+      <img src="img/portada-1.jpg" alt="Portada 1">
+      <img src="img/portada-2.jpg" alt="Portada 2">
+      <img src="img/portada-3.jpg" alt="Portada 3">
     </div>
   </section>
-
   <section id="artistas">
     <h2>Artistas</h2>
     <div class="gallery-row">
       <div class="artist-card">
-        <img src="img/waizr.png" alt="wa!zr" />
+        <img src="img/waizr.png" alt="wa!zr">
         <div>wa!zr</div>
       </div>
       <div class="artist-card">
-        <img src="img/eztre.png" alt="eztrerightnow" />
+        <img src="img/eztre.png" alt="eztrerightnow">
         <div>eztrerightnow</div>
       </div>
     </div>
   </section>
-
   <section id="lanzamientos">
     <h2>Lanzamientos</h2>
     <p style="text-align:center;">Escuchá nuestras playlists en Spotify y descubrí los últimos lanzamientos.</p>
     <div class="video">
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3cnOXctq1b9MRQtJKg635E?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3cnOXctq1b9MRQtJKg635E?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
   </section>
-
   <section id="contacto">
     <h2>Contacto</h2>
     <form class="contact">
@@ -301,16 +230,14 @@
       <a href="https://wa.me/5491132454848" style="color:#25D366; text-align:center;">O chateá por WhatsApp</a>
     </form>
   </section>
-
   <footer>
     <div class="social-icons">
       <a href="https://instagram.com/toptier" target="_blank">Instagram</a>
       <a href="https://facebook.com/toptier" target="_blank">Facebook</a>
       <a href="https://wa.me/5491132454848" target="_blank">WhatsApp</a>
     </div>
-    <p style="margin-top:1rem; font-size:0.85rem; color:#777;">&copy; 2025 Top Tier Music Inc.</p>
+    <p style="margin-top:1rem; font-size:0.85rem; color:#777;">© 2025 Top Tier Music Inc.</p>
   </footer>
-
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
