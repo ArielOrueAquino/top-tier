@@ -368,24 +368,29 @@
 
 @media (max-width: 768px) {
   .logo-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: space-between;
     padding: 0.75rem 1rem;
+    position: relative;
   }
 
   .logo-container img {
+    grid-column: 1 / 2;
     height: 36px;
+    justify-self: start;
   }
 
   .logo-container span {
+    grid-column: 2 / 3;
     font-size: 1.8rem;
-    flex: 1;
     text-align: center;
-    margin: 0;
+    justify-self: center;
   }
 
   .hamburger {
+    grid-column: 3 / 4;
+    justify-self: end;
     position: static;
   }
 }
