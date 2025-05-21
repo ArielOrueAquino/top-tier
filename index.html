@@ -7,7 +7,8 @@
 <title>Top Tier</title>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<style>@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700&family=Rubik:wght@400;700&display=swap');
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700&family=Rubik:wght@400;700&display=swap');
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Rubik', sans-serif;
@@ -131,7 +132,7 @@
       text-align: center;
     }
     .spotify-player {
-      max-width: 1128px;
+      max-width: 1080px;
       margin: 2rem auto;
     }
     .contact {
@@ -164,7 +165,8 @@
       display: none;
 	  z-index: 1000
     }
-    
+    @media (max-width: 768px) {
+      .hamburger { display: block; }
       .top-bar {
       justify-content: space-between; flex-direction: column; align-items: flex-start; justify-content: center; }
       nav { flex-direction: column; align-items: center; }
@@ -184,7 +186,11 @@
       .hide-mobile { display: none !important; }
     }
   
-    
+    @media (max-width: 768px) {
+      .top-bar {
+        flex-direction: row;
+        justify-content: space-between;
+      }
       .logo-container {
         order: 1;
       }
@@ -196,7 +202,11 @@
       }
     }
   
-    
+    @media (max-width: 768px) {
+  	.gallery img,
+  	.gallery-row img {
+    	  display: none;
+  	}
 
   	.gallery img.visible-mobile,
  	.gallery-row img.visible-mobile {
@@ -204,7 +214,12 @@
   	}
     }
 
-
+@media (max-width: 768px) {
+  /* Ajuste visual para hamburguesa (más alineado verticalmente con logo) */
+  .hamburger {
+    font-size: 2.3rem;
+    top: 50%;
+  }
 
   /* Ajuste de imagen asesoría para que sea 1:1 como las otras */
   .advisory-img {
@@ -215,7 +230,11 @@
 }
 
   
-
+@media (max-width: 768px) {
+  .hamburger {
+    font-size: 2.3rem;
+    top: 48%;
+  }
 
   .advisory-img {
     aspect-ratio: 1 / 1;
@@ -273,11 +292,17 @@
 
 .desktop-only { display: inline-block; }
 .mobile-only { display: none; }
-
+@media (max-width: 768px) {
+  .desktop-only { display: none !important; }
   .mobile-only { display: block !important; }
 }
 
-
+@media (max-width: 768px) {
+  .logo-container {
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
 
   .logo-container span {
     margin: 0 auto;
@@ -313,7 +338,13 @@
   flex: 0 1 auto;
 }
 
-
+@media (max-width: 768px) {
+  .logo-container {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    padding: 0.5rem 3rem;
+  }
 
   .logo-container img {
     position: absolute;
@@ -334,145 +365,6 @@
     right: 0.75rem;
   }
 }
-
-
-
-  .logo-brand {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .logo-brand img {
-    height: 34px;
-  }
-
-  .logo-brand span {
-    font-size: 1.8rem;
-  }
-
-  .hamburger {
-    position: static;
-  }
-}
-
-
-
-
-    .top-bar .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-	  padding-right: 1rem;
-	  margin-right: 1rem;
-	  border-right: 1px solid rgba(255, 255, 255, 0.03);
-    }
-    .top-bar .logo-container img { height: 48px; }
-    .top-bar .logo-container span {
-}
-
-
-
-  .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .logo-container img {
-    height: 40px;
-  }
-
-  .logo-container span {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.6rem;
-    color: #e50914;
-    font-weight: 700;
-  }
-
-  .hamburger {
-    font-size: 2.3rem;
-    background: none;
-    border: none;
-    color: #e50914;
-    cursor: pointer;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.95);
-    padding: 1rem 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 999;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-}
-
-@media (max-width: 768px) {
-  .top-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 1rem;
-    background-color: rgba(0, 0, 0, 0.9);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-
-  .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .logo-container img {
-    height: 40px;
-  }
-
-  .logo-container span {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.6rem;
-    color: #e50914;
-    font-weight: 700;
-  }
-
-  .hamburger {
-    font-size: 2.3rem;
-    background: none;
-    border: none;
-    color: #e50914;
-    cursor: pointer;
-    position: static;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.95);
-    padding: 1rem 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 999;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-}
-
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Staatliches&amp;display=swap" rel="stylesheet"/>
 </head>
@@ -497,7 +389,7 @@
 <section id="nosotros" style="padding: 3rem 1.5rem; border-bottom: 1px solid #333; background-color: rgba(10, 10, 10, 0.9);">
 <h2 style="font-family: 'Syne', sans-serif; font-size: 2rem; color: #e50914; text-align: center; margin-bottom: 1rem;">
       ACERCA DE NOSOTROS
-    </h2><div class="linea-titulo anim-line" data-aos="zoom-in" data-aos-delay="200"></div><div class="spotify-player"><img alt="Acerca de Nosotros" class="advisory-img" src="img/nosotros.png"/></div>
+    </h2><div class="linea-titulo anim-line" data-aos="zoom-in" data-aos-delay="200"></div><img alt="Acerca de Nosotros" class="advisory-img" src="img/nosotros.png"/>
 <p style="max-width: 800px; margin: auto; font-size: 1.2rem; text-align: center; font-family: 'Rubik', sans-serif;">
       Somos un sello independiente enfocados en hacer música, visuales e imagen con criterio de excelencia para artistas que buscan ser <strong>TOP TIER</strong>.
     </p>
@@ -523,7 +415,7 @@
 <section id="asesoramiento">
 <h2>Asesoramiento</h2><div class="linea-titulo anim-line" data-aos="zoom-in" data-aos-delay="200"></div>
 <p style="text-align:center; max-width: 600px; margin: auto;">Te ayudamos a entender y manejar tus plataformas, tu marca y tus datos. Branding, distribución, analytics y estrategias pensadas para crecer con control.</p>
-<div class="spotify-player"><img alt="asesoria" class="advisory-img" src="img/asesoria.png"/></div>
+<img alt="asesoria" class="advisory-img" src="img/asesoria.png"/>
 </section>
 <section id="imagen">
 <h2>Imagen</h2><div class="linea-titulo anim-line" data-aos="zoom-in" data-aos-delay="200"></div>
