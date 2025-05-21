@@ -37,6 +37,7 @@
     #overlay img { max-width: 220px; }
     @keyframes fadeOut { to { opacity: 0; visibility: hidden; } }
     .top-bar {
+      justify-content: space-between;
       max-width: 1200px;
       margin: 0 auto;
       display: flex;
@@ -53,6 +54,9 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
+	  padding-right: 1rem;
+	  margin-right: 1rem;
+	  border-right: 1px solid #333;
     }
     .top-bar .logo-container img { height: 48px; }
     .top-bar .logo-container span {
@@ -114,11 +118,13 @@
     }
     .artist-card { text-align: center; }
     .artist-card img {
-      width: 180px;
-      height: 180px;
+      width: 220px;
+      height: 220px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid #e50914;
+	  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+	  transition: transform 0.3s ease;
     }
     footer {
       background-color: #000;
@@ -160,7 +166,8 @@
     }
     @media (max-width: 768px) {
       .hamburger { display: block; }
-      .top-bar { flex-direction: column; align-items: flex-start; justify-content: center; }
+      .top-bar {
+      justify-content: space-between; flex-direction: column; align-items: flex-start; justify-content: center; }
       nav { flex-direction: column; align-items: center; }
       .nav-links {
         display: none;
@@ -177,6 +184,30 @@
       .nav-links.show { display: flex; }
       .hide-mobile { display: none !important; }
     }
+  
+    @media (max-width: 768px) {
+      .top-bar {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .logo-container {
+        order: 1;
+      }
+      .hamburger {
+        order: 2;
+        color: #e50914;
+        font-size: 1.8rem;
+        cursor: pointer;
+      }
+    }
+
+  
+    @media (max-width: 768px) {
+      .gallery img:not(:first-child), .gallery-row img:not(:first-child) {
+        display: none;
+      }
+    }
+
   </style>
 </head>
 <body>
