@@ -109,7 +109,7 @@
     }
     .advisory-img {
       width: 100%;
-      max-width: 1120px;
+      max-width: 1200px;
       height: auto;
       aspect-ratio: 3 / 1;
       border-radius: 1rem;
@@ -119,8 +119,8 @@
     }
     .artist-card { text-align: center; }
     .artist-card img {
-      width: 300px;
-      height: 300px;
+      width: 360px;
+      height: 360px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid #e50914;
@@ -133,7 +133,7 @@
       text-align: center;
     }
     .spotify-player {
-      max-width: 1120px;
+      max-width: 1080px;
       margin: 2rem auto;
     }
     .contact {
@@ -212,61 +212,17 @@
 
   
 @media (max-width: 768px) {
-  .top-bar {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo-container {
-    order: 1;
-  }
-
+  /* Ajuste visual para hamburguesa (más alineado verticalmente con logo) */
   .hamburger {
-    order: 2;
-    display: block;
-    color: #e50914;
-    font-size: 2rem;
-    cursor: pointer;
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    z-index: 1000;
+    font-size: 2.3rem;
+    top: 48%;
   }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.95);
-    padding: 1rem 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 999;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .gallery img:not(:first-child),
-  .gallery-row img:not(:first-child) {
-    display: none;
-  }
-
-  .hide-mobile {
-    display: none !important;
-  }
-
-  .top-bar .logo-container {
-    border-right: none;
-    margin-right: 0;
-    padding-right: 0;
+  /* Ajuste de imagen asesoría para que sea 1:1 como las otras */
+  .advisory-img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    height: auto;
   }
 }
 
