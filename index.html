@@ -392,6 +392,42 @@
     position: static;
   }
 }
+
+@media (max-width: 768px) {
+  .top-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .logo-container img {
+    height: 40px;
+  }
+
+  .logo-container span {
+    font-size: 1.5rem;
+    font-family: 'Syne', sans-serif;
+    color: #e50914;
+    font-weight: 700;
+  }
+
+  .hamburger {
+    font-size: 2rem;
+    color: #e50914;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Staatliches&amp;display=swap" rel="stylesheet"/>
 </head>
