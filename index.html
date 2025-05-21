@@ -59,12 +59,13 @@
       margin: 0 auto;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       padding: 1rem 2rem;
       background-color: rgba(0, 0, 0, 0.9);
       position: sticky;
       top: 0;
       z-index: 100;
+      position: relative;
     }
 
     .top-bar .logo-container {
@@ -208,31 +209,30 @@
       cursor: pointer;
     }
 
-    @media (max-width: 768px) {
-      .top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-
     .hamburger {
-      display: none;
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
       font-size: 2rem;
       background: none;
       color: white;
       border: none;
       cursor: pointer;
+      display: none;
     }
 
     @media (max-width: 768px) {
-      .hamburger {
-        display: block;
+      .hamburger { display: block; }
+      .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
       }
-
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
       .nav-links {
         display: none;
         flex-direction: column;
@@ -245,10 +245,8 @@
         left: 0;
         z-index: 999;
       }
-
-      .nav-links.show {
-        display: flex;
-      }
+      .nav-links.show { display: flex; }
+      .hide-mobile { display: none !important; }
     }
   </style>
 </head>
@@ -259,8 +257,8 @@
   </div>
 
   <div class="top-bar">
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
     <div class="logo-container">
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
       <img src="img/top-logo.png" alt="Top Tier logo">
       <span>TOP TIER</span>
     </div>
@@ -274,7 +272,6 @@
       <a href="#contacto">Contacto</a>
     </nav>
   </div>
-
   <section id="musica">
     <h2>Producción Musical</h2>
     <p style="text-align:center;">Beats oscuros, grabación cruda, mezcla y mastering profesional. Sonido callejero con calidad de estudio.</p>
