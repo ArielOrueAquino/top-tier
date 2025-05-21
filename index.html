@@ -7,8 +7,7 @@
 <title>Top Tier</title>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700&family=Rubik:wght@400;700&display=swap');
+<style>@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700&family=Rubik:wght@400;700&display=swap');
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Rubik', sans-serif;
@@ -165,8 +164,7 @@
       display: none;
 	  z-index: 1000
     }
-    @media (max-width: 768px) {
-      .hamburger { display: block; }
+    
       .top-bar {
       justify-content: space-between; flex-direction: column; align-items: flex-start; justify-content: center; }
       nav { flex-direction: column; align-items: center; }
@@ -186,11 +184,7 @@
       .hide-mobile { display: none !important; }
     }
   
-    @media (max-width: 768px) {
-      .top-bar {
-        flex-direction: row;
-        justify-content: space-between;
-      }
+    
       .logo-container {
         order: 1;
       }
@@ -202,11 +196,7 @@
       }
     }
   
-    @media (max-width: 768px) {
-  	.gallery img,
-  	.gallery-row img {
-    	  display: none;
-  	}
+    
 
   	.gallery img.visible-mobile,
  	.gallery-row img.visible-mobile {
@@ -214,12 +204,7 @@
   	}
     }
 
-@media (max-width: 768px) {
-  /* Ajuste visual para hamburguesa (más alineado verticalmente con logo) */
-  .hamburger {
-    font-size: 2.3rem;
-    top: 50%;
-  }
+
 
   /* Ajuste de imagen asesoría para que sea 1:1 como las otras */
   .advisory-img {
@@ -230,11 +215,7 @@
 }
 
   
-@media (max-width: 768px) {
-  .hamburger {
-    font-size: 2.3rem;
-    top: 48%;
-  }
+
 
   .advisory-img {
     aspect-ratio: 1 / 1;
@@ -292,17 +273,11 @@
 
 .desktop-only { display: inline-block; }
 .mobile-only { display: none; }
-@media (max-width: 768px) {
-  .desktop-only { display: none !important; }
+
   .mobile-only { display: block !important; }
 }
 
-@media (max-width: 768px) {
-  .logo-container {
-    justify-content: center;
-    position: relative;
-    width: 100%;
-  }
+
 
   .logo-container span {
     margin: 0 auto;
@@ -338,13 +313,7 @@
   flex: 0 1 auto;
 }
 
-@media (max-width: 768px) {
-  .logo-container {
-    position: relative;
-    width: 100%;
-    justify-content: center;
-    padding: 0.5rem 3rem;
-  }
+
 
   .logo-container img {
     position: absolute;
@@ -366,13 +335,7 @@
   }
 }
 
-@media (max-width: 768px) {
-  .logo-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 1rem;
-  }
+
 
   .logo-brand {
     display: flex;
@@ -395,19 +358,7 @@
 
 
 
-@media (max-width: 768px) {
-  .top-bar {
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: rgba(0, 0, 0, 0.9);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
+
     .top-bar .logo-container {
       display: flex;
       align-items: center;
@@ -420,18 +371,7 @@
     .top-bar .logo-container span {
 }
 
-@media (max-width: 768px) {
-  .top-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 1rem;
-    background-color: rgba(0, 0, 0, 0.9);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
+
 
   .logo-container {
     display: flex;
@@ -474,7 +414,66 @@
   .nav-links.show {
     display: flex;
   }
-}</style>
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .logo-container img {
+    height: 40px;
+  }
+
+  .logo-container span {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.6rem;
+    color: #e50914;
+    font-weight: 700;
+  }
+
+  .hamburger {
+    font-size: 2.3rem;
+    background: none;
+    border: none;
+    color: #e50914;
+    cursor: pointer;
+    position: static;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 1rem 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+</style>
 <link href="https://fonts.googleapis.com/css2?family=Staatliches&amp;display=swap" rel="stylesheet"/>
 </head>
 <body>
