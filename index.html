@@ -230,6 +230,30 @@
   }
 }
 
+  
+@media (max-width: 768px) {
+  .hamburger {
+    font-size: 2.3rem;
+    top: 48%;
+  }
+
+  .advisory-img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    height: auto;
+  }
+
+  .gallery img,
+  .gallery-row img {
+    display: none;
+  }
+
+  .gallery img.visible-mobile,
+  .gallery-row img.visible-mobile {
+    display: block;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -255,7 +279,7 @@
     <p style="text-align:center;">Beats oscuros, grabación cruda, mezcla y mastering profesional. Sonido callejero con calidad de estudio.</p>
     <div class="gallery">
       <img src="img/prod-1.png" alt="producción 1" /> 
-      <img src="img/prod-2.png" alt="producción 2" /> class="visible-mobile" />
+      <img src="img/prod-2.png" alt="producción 2"  class="visible-mobile" />
       <img src="img/prod-3.jpg" alt="producción 3" /> 
     </div>
   </section>
@@ -264,7 +288,7 @@
     <p style="text-align:center;">Rodajes profesionales, edición, FX, VFX, fotografía, animación y dirección de arte.</p>
     <div class="gallery">
       <img src="img/video-1.jpeg" alt="video 1" />
-      <img src="img/video-2.jpg" alt="video 2" /> class="visible-mobile" />
+      <img src="img/video-2.jpg" alt="video 2"  class="visible-mobile" />
       <img src="img/video-3.png" alt="video 3" />
     </div>
   </section>
