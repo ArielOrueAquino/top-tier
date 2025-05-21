@@ -202,20 +202,24 @@
         cursor: pointer;
       }
     }
-
   
     @media (max-width: 768px) {
-      .gallery img:not(:first-child), .gallery-row img:not(:first-child) {
-        display: none;
-      }
+  	.gallery img,
+  	.gallery-row img {
+    	  display: none;
+  	}
+
+  	.gallery img.visible-mobile,
+ 	.gallery-row img.visible-mobile {
+    	  display: block;
+  	}
     }
 
-  
 @media (max-width: 768px) {
   /* Ajuste visual para hamburguesa (más alineado verticalmente con logo) */
   .hamburger {
     font-size: 2.3rem;
-    top: 48%;
+    top: 50%;
   }
 
   /* Ajuste de imagen asesoría para que sea 1:1 como las otras */
@@ -250,9 +254,9 @@
     <h2>Producción Musical</h2>
     <p style="text-align:center;">Beats oscuros, grabación cruda, mezcla y mastering profesional. Sonido callejero con calidad de estudio.</p>
     <div class="gallery">
-      <img src="img/prod-1.png" alt="producción 1" />
-      <img src="img/prod-2.png" alt="producción 2" />
-      <img src="img/prod-3.jpg" alt="producción 3" />
+      <img src="img/prod-1.png" alt="producción 1" /> 
+      <img src="img/prod-2.png" alt="producción 2" /> class="visible-mobile" />
+      <img src="img/prod-3.jpg" alt="producción 3" /> 
     </div>
   </section>
   <section id="audiovisual">
@@ -260,7 +264,7 @@
     <p style="text-align:center;">Rodajes profesionales, edición, FX, VFX, fotografía, animación y dirección de arte.</p>
     <div class="gallery">
       <img src="img/video-1.jpeg" alt="video 1" />
-      <img src="img/video-2.jpg" alt="video 2" />
+      <img src="img/video-2.jpg" alt="video 2" /> class="visible-mobile" />
       <img src="img/video-3.png" alt="video 3" />
     </div>
   </section>
