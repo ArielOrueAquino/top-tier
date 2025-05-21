@@ -55,30 +55,34 @@
     }
 
     .top-bar {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 100%;
       padding: 1rem 2rem;
       background-color: rgba(0, 0, 0, 0.9);
       position: sticky;
       top: 0;
       z-index: 100;
+    }
+
+    .top-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
     }
 
-    .top-bar .logo-container {
+    .logo-container {
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
 
-    .top-bar .logo-container img {
+    .logo-container img {
       height: 48px;
     }
 
-    .top-bar .logo-container span {
+    .logo-container span {
       font-family: 'Syne', sans-serif;
       font-size: 1.6rem;
       color: #e50914;
@@ -222,16 +226,13 @@
       display: none;
     }
 
+    .hide-mobile {
+      display: block;
+    }
+
     @media (max-width: 768px) {
-      .hamburger { display: block; }
-      .top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-      }
-      nav {
-        flex-direction: column;
-        align-items: center;
+      .hamburger {
+        display: block;
       }
       .nav-links {
         display: none;
@@ -245,8 +246,12 @@
         left: 0;
         z-index: 999;
       }
-      .nav-links.show { display: flex; }
-      .hide-mobile { display: none !important; }
+      .nav-links.show {
+        display: flex;
+      }
+      .hide-mobile {
+        display: none !important;
+      }
     }
   </style>
 </head>
@@ -257,20 +262,21 @@
   </div>
 
   <div class="top-bar">
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-    <div class="logo-container">
-      <img src="img/top-logo.png" alt="Top Tier logo">
-      <span>TOP TIER</span>
-    </div>
-    <nav id="main-nav" class="nav-links">
-      <a href="#musica">Producción Musical</a>
-      <a href="#audiovisual">Producción Visual</a>
-      <a href="#imagen">Imagen</a>
-      <a href="#asesoramiento">Asesoramiento</a>
-      <a href="#artistas">Artistas</a>
-      <a href="#lanzamientos">Lanzamientos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+    <div class="top-bar-inner">
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <div class="logo-container">
+        <img src="img/top-logo.png" alt="Top Tier logo">
+        <span>TOP TIER</span>
+      </div>
+      <nav id="main-nav" class="nav-links">
+        <a href="#musica">Producción Musical</a>
+        <a href="#audiovisual">Producción Visual</a>
+        <a href="#imagen">Imagen</a>
+        <a href="#asesoramiento">Asesoramiento</a>
+        <a href="#artistas">Artistas</a>
+        <a href="#lanzamientos">Lanzamientos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
   </div>
   <section id="musica">
     <h2>Producción Musical</h2>
