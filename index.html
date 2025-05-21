@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Top Tier</title>
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Top Tier</title>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
     @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700&family=Rubik:wght@400;700&display=swap');
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -38,7 +39,7 @@
     @keyframes fadeOut { to { opacity: 0; visibility: hidden; } }
     .top-bar {
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -107,7 +108,7 @@
     }
     .advisory-img {
       width: 100%;
-      max-width: 1200px;
+      max-width: 1400px;
       height: auto;
       aspect-ratio: 3 / 1;
       border-radius: 1rem;
@@ -262,116 +263,136 @@
   margin-top: 0.5rem;
 }
 
-  </style>
-  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  
+.linea-titulo {
+  width: 60px;
+  height: 3px;
+  background-color: #e50914;
+  margin: 0.5rem auto 2rem auto;
+  border-radius: 2px;
+}
+
+.anim-line {
+  opacity: 0;
+  transform: scaleX(0);
+  transition: all 0.4s ease;
+  transform-origin: center;
+}
+
+.anim-line.visible {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.logo-container,
+.logo-container span,
+.logo-container img {
+  cursor: pointer !important;
+}
+
+.desktop-only { display: inline-block; }
+.mobile-only { display: none; }
+@media (max-width: 768px) {
+  .desktop-only { display: none !important; }
+  .mobile-only { display: block !important; }
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&amp;display=swap" rel="stylesheet"/>
 </head>
 <body>
-  <div id="overlay"><img src="img/top-logo.png" alt="Top Tier Logo"></div>
-  <div class="top-bar">
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-    <div class="logo-container">
-      <img src="img/top-logo.png" alt="Top Tier logo">
-      <span>TOP TIER</span>
-    </div>
-    <nav id="main-nav" class="nav-links">
-      <a href="#musica">Producción Musical</a>
-      <a href="#audiovisual">Audiovisual</a>
-      <a href="#imagen">Imagen</a>
-      <a href="#asesoramiento">Asesoramiento</a>
-      <a href="#artistas">Artistas</a>
-      <a href="#lanzamientos">Lanzamientos</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </div>
-
-  <section id="nosotros" style="padding: 3rem 1.5rem; border-bottom: 1px solid #333; background-color: rgba(10, 10, 10, 0.9);">
-    <h2 style="font-family: 'Syne', sans-serif; font-size: 2rem; color: #e50914; text-align: center; margin-bottom: 1rem;">
+<div id="overlay"><img alt="Top Tier Logo" src="img/top-logo.png"/></div>
+<div class="top-bar">
+<button class="hamburger" onclick="toggleMenu()">☰</button>
+<div class="logo-container">
+<img alt="Top Tier logo" src="img/top-logo.png"/>
+<span>TOP TIER</span>
+</div>
+<nav class="nav-links" id="main-nav">
+<a href="#musica">Producción Musical</a>
+<a href="#audiovisual">Audiovisual</a>
+<a href="#imagen">Imagen</a>
+<a href="#asesoramiento">Asesoramiento</a>
+<a href="#artistas">Artistas</a>
+<a href="#lanzamientos">Lanzamientos</a>
+<a href="#contacto">Contacto</a>
+<a class="desktop-only" href="#nosotros">Acerca de Nosotros</a><a class="mobile-only" href="#nosotros">Acerca de Nosotros</a></nav>
+</div>
+<section id="nosotros" style="padding: 3rem 1.5rem; border-bottom: 1px solid #333; background-color: rgba(10, 10, 10, 0.9);">
+<h2 style="font-family: 'Syne', sans-serif; font-size: 2rem; color: #e50914; text-align: center; margin-bottom: 1rem;">
       ACERCA DE NOSOTROS
-    </h2>
-    <p style="max-width: 800px; margin: auto; font-size: 1.2rem; text-align: center; font-family: 'Rubik', sans-serif;">
+    </h2><div class="linea-titulo anim-line" data-aos="zoom-in" data-aos-delay="200"></div><img alt="Acerca de Nosotros" class="advisory-img" src="img/nosotros.png"/>
+<p style="max-width: 800px; margin: auto; font-size: 1.2rem; text-align: center; font-family: 'Rubik', sans-serif;">
       Somos un sello independiente enfocados en hacer música, visuales e imagen con criterio de excelencia para artistas que buscan ser <strong>TOP TIER</strong>.
     </p>
-  </section>
-
-  <section id="musica">
-    <h2>Producción Musical</h2>
-    <p style="text-align:center;">Grabación, mezcla, mastering y beats personalizados del género urbano. También te acompañamos en la escritura y estructura de tus canciones.</p>
-    <div class="gallery">
-      <img src="img/prod-1.png" alt="producción 1" /> 
-      <img src="img/prod-2.png" alt="producción 2" />
-      <img src="img/prod-3.jpg" alt="producción 3"  class="visible-mobile" />
-    </div>
-  </section>
-  <section id="audiovisual">
-    <h2>Audiovisual</h2>
-    <p style="text-align:center;">Edición profesional, FX y corrección de color al nivel más alto. El trabajo final se adapta a los requisitos técnicos de cada plataforma de streaming.</p>
-    <div class="gallery">
-      <img src="img/video-1.jpeg" alt="video 1" />
-      <img src="img/video-2.jpg" alt="video 2"  class="visible-mobile" />
-      <img src="img/video-3.png" alt="video 3" />
-    </div>
-  </section>
-  <section id="asesoramiento">
-    <h2>Asesoramiento</h2>
-    <p style="text-align:center; max-width: 600px; margin: auto;">Te ayudamos a entender y manejar tus plataformas, tu marca y tus datos. Branding, distribución, analytics y estrategias pensadas para crecer con control.</p>
-    <img src="img/asesoria.png" alt="asesoria" class="advisory-img" />
-  </section>
-  <section id="imagen">
-    <h2>Imagen</h2>
-    <p style="text-align:center;">Diseño de portadas, flyers y banners con calidad profesional. Adaptamos cada archivo al formato que requiere cada plataforma.</p>
-    <div class="gallery-row">
-      <img src="img/portada-1.jpg" alt="portada 1" class="visible-mobile" />
-      <img src="img/portada-2.jpg" alt="portada 2" />
-      <img src="img/portada-3.jpg" alt="portada 3" />
-    </div>
-  </section>
-  <section id="artistas">
-    <h2>Artistas</h2>
-    <div class="gallery-row">
-      <div class="artist-card">
-        <img src="img/waizr.png" alt="waizr" class="visible-mobile" />
-        <div>wa!zr</div>
-      </div>
-      <div class="artist-card">
-        <img src="img/eztre.png" alt="eztrerightnow" class="visible-mobile" />
-        <div>eztrerightnow</div>
-      </div>
-    </div>
-  </section>
-  <section id="lanzamientos">
-  <h2>Lanzamientos</h2>
-  <p style="text-align:center;">
+</section>
+<section id="musica">
+<h2>Producción Musical</h2><div class="linea-titulo anim-line" data-aos="zoom-in" data-aos-delay="200"></div>
+<p style="text-align:center;">Grabación, mezcla, mastering y beats personalizados del género urbano. También te acompañamos en la escritura y estructura de tus canciones.</p>
+<div class="gallery">
+<img alt="producción 1" src="img/prod-1.png"/>
+<img alt="producción 2" src="img/prod-2.png"/>
+<img alt="producción 3" class="visible-mobile" src="img/prod-3.jpg"/>
+</div>
+</section>
+<section id="audiovisual">
+<h2>Audiovisual</h2><div class="linea-titulo anim-line" data-aos="zoom-in" data-aos-delay="200"></div>
+<p style="text-align:center;">Edición profesional, FX y corrección de color al nivel más alto. El trabajo final se adapta a los requisitos técnicos de cada plataforma de streaming.</p>
+<div class="gallery">
+<img alt="video 1" src="img/video-1.jpeg"/>
+<img alt="video 2" class="visible-mobile" src="img/video-2.jpg"/>
+<img alt="video 3" src="img/video-3.png"/>
+</div>
+</section>
+<section id="asesoramiento">
+<h2>Asesoramiento</h2><div class="linea-titulo anim-line" data-aos="zoom-in" data-aos-delay="200"></div>
+<p style="text-align:center; max-width: 600px; margin: auto;">Te ayudamos a entender y manejar tus plataformas, tu marca y tus datos. Branding, distribución, analytics y estrategias pensadas para crecer con control.</p>
+<img alt="asesoria" class="advisory-img" src="img/asesoria.png"/>
+</section>
+<section id="imagen">
+<h2>Imagen</h2><div class="linea-titulo anim-line" data-aos="zoom-in" data-aos-delay="200"></div>
+<p style="text-align:center;">Diseño de portadas, flyers y banners con calidad profesional. Adaptamos cada archivo al formato que requiere cada plataforma.</p>
+<div class="gallery-row">
+<img alt="portada 1" class="visible-mobile" src="img/portada-1.jpg"/>
+<img alt="portada 2" src="img/portada-2.jpg"/>
+<img alt="portada 3" src="img/portada-3.jpg"/>
+</div>
+</section>
+<section id="artistas">
+<h2>Artistas</h2><div class="linea-titulo anim-line" data-aos="zoom-in" data-aos-delay="200"></div>
+<div class="gallery-row">
+<div class="artist-card">
+<img alt="waizr" class="visible-mobile" src="img/waizr.png"/>
+<div>wa!zr</div>
+</div>
+<div class="artist-card">
+<img alt="eztrerightnow" class="visible-mobile" src="img/eztre.png"/>
+<div>eztrerightnow</div>
+</div>
+</div>
+</section>
+<section id="lanzamientos">
+<h2>Lanzamientos</h2><div class="linea-titulo anim-line" data-aos="zoom-in" data-aos-delay="200"></div>
+<p style="text-align:center;">
     Descubrí los últimos lanzamientos en Spotify.
   </p>
-  <div class="spotify-player">
-    <iframe
-      style="border-radius:12px"
-      src="https://open.spotify.com/embed/playlist/3cnOXctq1b9MRQtJKg635E?utm_source=generator"
-      width="100%"
-      height="352"
-      frameborder="0"
-      allowfullscreen=""
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy">
-    </iframe>
-  </div>
+<div class="spotify-player">
+<iframe allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen="" frameborder="0" height="352" loading="lazy" src="https://open.spotify.com/embed/playlist/3cnOXctq1b9MRQtJKg635E?utm_source=generator" style="border-radius:12px" width="100%">
+</iframe>
+</div>
 </section>
 <section id="contacto">
-  <h2>Contacto</h2>
-
-  <form class="contact" action="https://formbold.com/s/oyGNJ" method="POST" onsubmit="mostrarConfirmacion(event)">
-    <input type="text" name="name" placeholder="Tu nombre" required />
-    <input type="email" name="email" placeholder="Tu correo electrónico" required />
-    <textarea name="message" rows="5" placeholder="Tu consulta" required></textarea>
-    <button type="submit">Enviar</button>
-    <a href="https://wa.me/5491132454848" style="color:#25D366; display:block; text-align:center; margin-top: 10px;">O chateá por WhatsApp</a>
-  </form>
-
-  <div id="mensaje-confirmacion" style="display:none; margin-top: 20px; text-align: center; font-family: 'Syne', sans-serif; color: #fff; background: rgba(255, 0, 0, 0.1); padding: 1rem; border-radius: 12px;">
-    <p>✅ Tu consulta fue enviada correctamente. En breve te contactaremos con toda la información solicitada.</p>
-  </div>
+<h2>Contacto</h2><div class="linea-titulo anim-line" data-aos="zoom-in" data-aos-delay="200"></div>
+<form action="https://formbold.com/s/oyGNJ" class="contact" method="POST" onsubmit="mostrarConfirmacion(event)">
+<input name="name" placeholder="Tu nombre" required="" type="text"/>
+<input name="email" placeholder="Tu correo electrónico" required="" type="email"/>
+<textarea name="message" placeholder="Tu consulta" required="" rows="5"></textarea>
+<button type="submit">Enviar</button>
+<a href="https://wa.me/5491132454848" style="color:#25D366; display:block; text-align:center; margin-top: 10px;">O chateá por WhatsApp</a>
+</form>
+<div id="mensaje-confirmacion" style="display:none; margin-top: 20px; text-align: center; font-family: 'Syne', sans-serif; color: #fff; background: rgba(255, 0, 0, 0.1); padding: 1rem; border-radius: 12px;">
+<p>✅ Tu consulta fue enviada correctamente. En breve te contactaremos con toda la información solicitada.</p>
+</div>
 </section>
-
 <script>
   function mostrarConfirmacion(event) {
     event.preventDefault(); // detiene el envío por defecto
@@ -393,30 +414,82 @@
     });
   }
 </script>
-
-  <footer>
-    <div class="social-icons" style="display: flex; justify-content: center; align-items: center; gap: 4rem;">
-      <a href="https://www.facebook.com/toptiermusicinc" target="_blank">
-        <img src="img/facebook.png" alt="Facebook" style="width: 40px; height: 40px;">
-      </a>
-      <a href="https://www.instagram.com/toptiermusicinc/" target="_blank">
-        <img src="img/instagram.png" alt="Instagram" style="width: 40px; height: 40px;">
-      </a>
-      <a href="https://api.whatsapp.com/send/?phone=5491132454848&text&type=phone_number&app_absent=0" target="_blank">
-        <img src="img/whatsapp.png" alt="WhatsApp" style="width: 40px; height: 40px;">
-      </a>
-    </div>
-    <p style="margin-top:1rem; font-size:0.85rem; color:#777;">© 2025 Top Tier Music Inc.</p>
-  </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
+<footer>
+<div class="social-icons" style="display: flex; justify-content: center; align-items: center; gap: 4rem;">
+<a href="https://www.facebook.com/toptiermusicinc" target="_blank">
+<img alt="Facebook" src="img/facebook.png" style="width: 40px; height: 40px;"/>
+</a>
+<a href="https://www.instagram.com/toptiermusicinc/" target="_blank">
+<img alt="Instagram" src="img/instagram.png" style="width: 40px; height: 40px;"/>
+</a>
+<a href="https://api.whatsapp.com/send/?phone=5491132454848&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank">
+<img alt="WhatsApp" src="img/whatsapp.png" style="width: 40px; height: 40px;"/>
+</a>
+</div>
+<p style="margin-top:1rem; font-size:0.85rem; color:#777;">© 2025 Top Tier Music Inc.</p>
+</footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+      duration: 700,
+      offset: 200
+    });
     function toggleMenu() {
       const nav = document.getElementById("main-nav");
       nav.classList.toggle("show");
     }
-  </script>
-</body>
+    </script>
+<script>
+const animTimers = {};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const h2 = entry.target;
+    const line = h2.nextElementSibling;
+    if (!line || !line.classList.contains("anim-line")) return;
+
+    if (entry.isIntersecting) {
+      line.classList.add("visible");
+
+      // Reinicia temporizador si ya existía
+      const id = line.dataset.id || Math.random().toString(36).substring(2, 9);
+      line.dataset.id = id;
+
+      if (animTimers[id]) clearTimeout(animTimers[id]);
+      animTimers[id] = setTimeout(() => {
+        line.classList.remove("visible");
+      }, 5000);
+    }
+  });
+}, {
+  threshold: 0.6
+});
+
+document.querySelectorAll("h2").forEach(h2 => {
+  if (h2.nextElementSibling && h2.nextElementSibling.classList.contains("anim-line")) {
+    observer.observe(h2);
+  }
+});
+
+// Scroll to top + close menu
+document.addEventListener("DOMContentLoaded", () => {
+  const logoContainer = document.querySelector(".logo-container");
+  const nav = document.getElementById("main-nav");
+
+  [...logoContainer.querySelectorAll("img, span")].forEach(el => {
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      if (nav.classList.contains("show")) {
+        nav.classList.remove("show");
+      }
+    });
+  });
+
+  if (window.location.hash) {
+    history.replaceState(null, null, window.location.pathname);
+  }
+});
+</script></body>
 </html>
 
