@@ -7,8 +7,7 @@
 <title>Top Tier</title>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700&family=Rubik:wght@400;700&display=swap');
+<style>@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700&family=Rubik:wght@400;700&display=swap');
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Rubik', sans-serif;
@@ -365,7 +364,77 @@
     right: 0.75rem;
   }
 }
-</style>
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+
+  .logo-container {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    padding: 0.5rem 3rem;
+  }
+
+  .logo-container img {
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%);
+    left: 0.75rem;
+    max-height: 40px;
+  }
+
+  .logo-container span {
+    position: absolute;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%);
+    right: 0.75rem;
+    font-size: 2.3rem;
+    background: none;
+    color: #e50914;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 1rem 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: block !important;
+  }
+}</style>
 <link href="https://fonts.googleapis.com/css2?family=Staatliches&amp;display=swap" rel="stylesheet"/>
 </head>
 <body>
