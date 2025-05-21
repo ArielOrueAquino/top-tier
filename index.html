@@ -615,3 +615,60 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script></body>
 </html>
+
+
+@media (max-width: 768px) {
+  .top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .logo-container img {
+    height: 40px;
+  }
+
+  .logo-container span {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.6rem;
+    color: #e50914;
+    font-weight: 700;
+  }
+
+  .hamburger {
+    font-size: 2.3rem;
+    background: none;
+    border: none;
+    color: #e50914;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 1rem 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
