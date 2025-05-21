@@ -296,6 +296,47 @@
   .desktop-only { display: none !important; }
   .mobile-only { display: block !important; }
 }
+
+@media (max-width: 768px) {
+  .logo-container {
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .logo-container span {
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .logo-container img {
+    position: absolute;
+    left: 0.75rem;
+  }
+
+  .hamburger {
+    right: 0.75rem;
+  }
+
+  #nosotros .advisory-img {
+    object-position: right;
+  }
+}
+
+.top-bar {
+  max-width: 100%;
+  padding: 1rem 3vw;
+}
+
+.top-bar {
+  justify-content: center;
+}
+
+.top-bar > * {
+  flex: 0 1 auto;
+}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Staatliches&amp;display=swap" rel="stylesheet"/>
 </head>
