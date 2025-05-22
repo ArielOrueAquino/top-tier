@@ -1917,58 +1917,7 @@
       nav.classList.toggle("show");
     }
     </script>
-<script>
-const animTimers = {};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    const h2 = entry.target;
-    const line = h2.nextElementSibling;
-    if (!line || !line.classList.contains("anim-line")) return;
-
-    if (entry.isIntersecting) {
-      line.classList.add("visible");
-
-      // Reinicia temporizador si ya existía
-      const id = line.dataset.id || Math.random().toString(36).substring(2, 9);
-      line.dataset.id = id;
-
-      if (animTimers[id]) clearTimeout(animTimers[id]);
-      animTimers[id] = setTimeout(() => {
-        line.classList.remove("visible");
-      }, 5000);
-    }
-  });
-}, {
-  threshold: 0.6
-});
-
-document.querySelectorAll("h2").forEach(h2 => {
-  if (h2.nextElementSibling && h2.nextElementSibling.classList.contains("anim-line")) {
-    observer.observe(h2);
-  }
-});
-
-// Scroll to top + close menu
-document.addEventListener("DOMContentLoaded", () => {
-  const logoContainer = document.querySelector(".logo-container");
-  const nav = document.getElementById("main-nav");
-
-  [...logoContainer.querySelectorAll("img, span")].forEach(el => {
-    el.addEventListener("click", (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      if (nav.classList.contains("show")) {
-        nav.classList.remove("show");
-      }
-    });
-  });
-
-  if (window.location.hash) {
-    history.replaceState(null, null, window.location.pathname);
-  }
-});
-</script><div style="display: none;">
+<div style="display: none;">
 <p>
   Somos <strong>Top Tier</strong>, un sello independiente con base en <strong>Barracas, CABA</strong>, dedicado a elevar el sonido y la imagen de artistas emergentes. 
   Nos especializamos en <strong>grabación, mezcla, mastering, beats originales, producción musical, visuales, portadas y videoclips</strong> para géneros urbanos como <strong>trap, hyperpop, rage, surf, new jazz, plug, detroit y más</strong>.  
