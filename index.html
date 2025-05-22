@@ -1925,10 +1925,26 @@
   Llevamos todo a un nivel top.
 </p>
 </div>
+
+
+
+
 <script>
-  if (location.hash && location.hash !== "#home") {
-    location.replace(location.origin + location.pathname + "#home");
-  }
+  document.addEventListener("DOMContentLoaded", () => {
+    const logoContainer = document.querySelector(".logo-container");
+    const nav = document.getElementById("main-nav");
+    if (logoContainer) {
+      [...logoContainer.querySelectorAll("img, span")].forEach(el => {
+        el.addEventListener("click", (e) => {
+          e.preventDefault();
+          location.replace(location.origin + location.pathname + "#home");
+          if (nav && nav.classList.contains("show")) {
+            nav.classList.remove("show");
+          }
+        });
+      });
+    }
+  });
 </script>
 
 <script>
