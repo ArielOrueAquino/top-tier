@@ -1930,5 +1930,18 @@
     location.replace(location.origin + location.pathname + "#home");
   }
 </script>
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    if (location.hash === "#home") {
+      const target = document.getElementById("home");
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: "smooth" });
+        }, 10);
+      }
+    }
+  });
+</script>
 </body>
 </html>
