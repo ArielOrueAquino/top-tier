@@ -1975,5 +1975,12 @@ document.addEventListener("DOMContentLoaded", () => {
   Si buscás un estudio de grabación en Buenos Aires que combine criterio estético, calidad técnica y visión artística, este es tu lugar. 
   Llevamos todo a un nivel top.
 </p>
-</div></body>
+</div>
+<script>
+  if (window.location.hash) {
+    window.scrollTo(0, 0);
+    history.replaceState("", document.title, window.location.pathname + window.location.search);
+  }
+</script>
+</body>
 </html>
