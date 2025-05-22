@@ -1777,15 +1777,7 @@
   }
 }
 </script><meta content="https://www.toptier.com.ar/img/preview.png" property="og:image"/><meta content="600" property="og:image:width"/><meta content="600" property="og:image:height"/><meta content="https://www.toptier.com.ar/img/preview.png" name="twitter:image"/><meta content="summary" name="twitter:card"/><meta content="https://www.toptier.com.ar" property="og:url"/><meta content="website" property="og:type"/><meta content="Página oficial de TOP TIER" property="og:title"/><meta content="Somos un sello independiente enfocados en hacer música, visuales e imagen con criterio de excelencia para artistas que buscan ser TOP TIER." property="og:description"/><meta content="Top Tier Music Inc." name="author"/><meta content="2025-05-22" property="article:published_time"/><link href="/img/favicon-v2.ico" rel="icon" type="image/x-icon"/></head>
-<body>
-<script>
-  if (location.hash && location.hash !== "#home") {
-    location.replace(location.origin + location.pathname + "#home");
-  }
-</script>
-
-
-<div id="home"></div>
+<body><div id="home"></div>
 <div id="overlay"><img alt="Top Tier Logo" src="img/top-logo.png"/></div>
 <div class="top-bar">
 <button class="hamburger" onclick="toggleMenu()">☰</button>
@@ -1925,13 +1917,63 @@
       nav.classList.toggle("show");
     }
     </script>
-<div style="display: none;">
+<script>
+const animTimers = {};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const h2 = entry.target;
+    const line = h2.nextElementSibling;
+    if (!line || !line.classList.contains("anim-line")) return;
+
+    if (entry.isIntersecting) {
+      line.classList.add("visible");
+
+      // Reinicia temporizador si ya existía
+      const id = line.dataset.id || Math.random().toString(36).substring(2, 9);
+      line.dataset.id = id;
+
+      if (animTimers[id]) clearTimeout(animTimers[id]);
+      animTimers[id] = setTimeout(() => {
+        line.classList.remove("visible");
+      }, 5000);
+    }
+  });
+}, {
+  threshold: 0.6
+});
+
+document.querySelectorAll("h2").forEach(h2 => {
+  if (h2.nextElementSibling && h2.nextElementSibling.classList.contains("anim-line")) {
+    observer.observe(h2);
+  }
+});
+
+// Scroll to top + close menu
+document.addEventListener("DOMContentLoaded", () => {
+  const logoContainer = document.querySelector(".logo-container");
+  const nav = document.getElementById("main-nav");
+
+  [...logoContainer.querySelectorAll("img, span")].forEach(el => {
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      if (nav.classList.contains("show")) {
+        nav.classList.remove("show");
+      }
+    });
+  });
+
+  if (window.location.hash) {
+    history.replaceState(null, null, window.location.pathname);
+  }
+});
+</script><div style="display: none;">
 <p>
   Somos <strong>Top Tier</strong>, un sello independiente con base en <strong>Barracas, CABA</strong>, dedicado a elevar el sonido y la imagen de artistas emergentes. 
   Nos especializamos en <strong>grabación, mezcla, mastering, beats originales, producción musical, visuales, portadas y videoclips</strong> para géneros urbanos como <strong>trap, hyperpop, rage, surf, new jazz, plug, detroit y más</strong>.  
   Si buscás un estudio de grabación en Buenos Aires que combine criterio estético, calidad técnica y visión artística, este es tu lugar. 
   Llevamos todo a un nivel top.
 </p>
-</div>
-</body>
+</div></body>
 </html>
