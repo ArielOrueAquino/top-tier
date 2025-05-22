@@ -1777,7 +1777,15 @@
   }
 }
 </script><meta content="https://www.toptier.com.ar/img/preview.png" property="og:image"/><meta content="600" property="og:image:width"/><meta content="600" property="og:image:height"/><meta content="https://www.toptier.com.ar/img/preview.png" name="twitter:image"/><meta content="summary" name="twitter:card"/><meta content="https://www.toptier.com.ar" property="og:url"/><meta content="website" property="og:type"/><meta content="Página oficial de TOP TIER" property="og:title"/><meta content="Somos un sello independiente enfocados en hacer música, visuales e imagen con criterio de excelencia para artistas que buscan ser TOP TIER." property="og:description"/><meta content="Top Tier Music Inc." name="author"/><meta content="2025-05-22" property="article:published_time"/><link href="/img/favicon-v2.ico" rel="icon" type="image/x-icon"/></head>
-<body><div id="home"></div>
+<body>
+<script>
+  if (location.hash && location.hash !== "#home") {
+    location.replace(location.origin + location.pathname + "#home");
+  }
+</script>
+
+
+<div id="home"></div>
 <div id="overlay"><img alt="Top Tier Logo" src="img/top-logo.png"/></div>
 <div class="top-bar">
 <button class="hamburger" onclick="toggleMenu()">☰</button>
@@ -1925,17 +1933,5 @@
   Llevamos todo a un nivel top.
 </p>
 </div>
-
-
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    if (window.location.hash) {
-      setTimeout(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-        history.replaceState(null, null, window.location.pathname);
-      }, 10);
-    }
-  });
-</script>
 </body>
 </html>
