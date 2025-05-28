@@ -1,17 +1,15 @@
-User-agent: *
-Disallow: /cgi-bin/
-Disallow: /tmp/
-Disallow: /junk/
-Allow: /
-
-# Sitemap principal
-Sitemap: https://www.toptier.com.ar/sitemap.xml
-
-# Política de rastreo para bots comunes
+# Permitir acceso completo a bots principales
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
+Allow: /
+
+# Permitir todo excepto carpetas irrelevantes para otros bots
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /junk/
 Allow: /
 
 # Bloqueo de bots problemáticos conocidos
@@ -29,3 +27,6 @@ Disallow: /
 
 User-agent: PetalBot
 Disallow: /
+
+# Sitemap del sitio
+Sitemap: https://www.toptier.com.ar/sitemap.xml
