@@ -1,28 +1,37 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-<url>
-<loc>https://www.toptier.com.ar/</loc>
-<image:image>
-<image:loc>https://www.toptier.com.ar/img/prod-1.png</image:loc>
-<image:caption>Producción musical estilo trap con mezcla profesional y beats personalizados</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://www.toptier.com.ar/img/video-1.jpeg</image:loc>
-<image:caption>Visuales y videoclips para artistas emergentes de música urbana</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://www.toptier.com.ar/img/portada-1.jpg</image:loc>
-<image:caption>Diseño de portada estilo rage para lanzamientos en Spotify</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://www.toptier.com.ar/img/waizr.png</image:loc>
-<image:caption>wa!zr - artista emergente con identidad visual y sonido Top Tier</image:caption>
-</image:image>
-<image:image>
-<image:loc>https://www.toptier.com.ar/img/eztre.png</image:loc>
-<image:caption>eztrerightnow - estética hyperpop y energía Detroit en una imagen</image:caption>
-</image:image>
-<lastmod>2025-05-28</lastmod>
-<changefreq>weekly</changefreq>
-<priority>1.0</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://www.toptier.com.ar/</loc>
+
+    <image:image>
+      <image:loc>https://www.toptier.com.ar/img/prod-1.webp</image:loc>
+      <image:caption>Producción musical estilo trap con mezcla profesional y beats personalizados</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.toptier.com.ar/img/video-1.webp</image:loc>
+      <image:caption>Visuales y videoclips para artistas emergentes de música urbana</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.toptier.com.ar/img/portada-1.webp</image:loc>
+      <image:caption>Diseño de portada estilo rage para lanzamientos en Spotify</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.toptier.com.ar/img/waizr.webp</image:loc>
+      <image:caption>wa!zr - artista emergente con identidad visual y sonido Top Tier</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://www.toptier.com.ar/img/eztre.webp</image:loc>
+      <image:caption>eztrerightnow - estética hyperpop y energía Detroit en una imagen</image:caption>
+    </image:image>
+
+    <lastmod>2025-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
 </urlset>
