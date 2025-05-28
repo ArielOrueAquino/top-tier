@@ -1988,5 +1988,29 @@
     });
   });
 </script>
-</body>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const frasesTopTier = [
+    "Esto no es para todos. Es para los que saben.",
+    "No trabajamos con cualquiera. Solo con quienes suenan Top Tier.",
+    "Si tenés lo necesario, ya sabés dónde encontrarnos.",
+    "No vendemos servicios. Creamos identidad sonora y visual.",
+    "Tu tema puede ser un archivo más... o una obra Top Tier."
+  ];
+
+  const fraseElegida = frasesTopTier[Math.floor(Math.random() * frasesTopTier.length)];
+
+  const contenedor = document.createElement("p");
+  contenedor.textContent = fraseElegida;
+  contenedor.style.textAlign = "center";
+  contenedor.style.marginTop = "2rem";
+  contenedor.style.fontStyle = "italic";
+  contenedor.style.fontSize = "1.1rem";
+  contenedor.style.color = "#aaa";
+  contenedor.style.fontFamily = "'Rubik', sans-serif";
+
+  const seccionNosotros = document.querySelector("#nosotros");
+  if (seccionNosotros) seccionNosotros.appendChild(contenedor);
+});
+</script></body>
 </html>
