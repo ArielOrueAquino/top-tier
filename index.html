@@ -1917,18 +1917,7 @@
       nav.classList.toggle("show");
     }
     </script>
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    if (location.hash === "#home") {
-      const target = document.getElementById("home");
-      if (target) {
-        setTimeout(() => {
-          target.scrollIntoView({ behavior: "smooth" });
-        }, 10);
-      }
-    }
-  });
-</script>
+
 <script>
   if (location.hash && location.hash !== "#home") {
     location.replace(location.origin + location.pathname + "#home");
@@ -1955,18 +1944,7 @@
     }
   });
 </script>
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    if (location.hash === "#home") {
-      const target = document.getElementById("home");
-      if (target) {
-        setTimeout(() => {
-          target.scrollIntoView({ behavior: "smooth" });
-        }, 10);
-      }
-    }
-  });
-</script>
+
 <script>
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener("click", function(e) {
@@ -2007,5 +1985,16 @@ document.addEventListener("DOMContentLoaded", () => {
 <p>
   Estudio de producción musical y visual enfocado en artistas emergentes que buscan construir un sonido propio, visuales con intención, y dirección creativa completa. Desde nuestro estudio en CABA o de forma remota, trabajamos con géneros como trap, rage, hyperpop, detroit, surf y new jazz. Creamos beats originales, realizamos mezcla y mastering profesional, grabamos voces, diseñamos portadas y videoclips, y te guiamos en branding, distribución, Spotify for Artists y lanzamientos estratégicos.
 </p>
-</div></body>
+</div><script>
+window.addEventListener("load", () => {
+  if (location.hash === "#home") {
+    const target = document.getElementById("home");
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }
+});
+</script></body>
 </html>
