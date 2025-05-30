@@ -5,27 +5,27 @@
     <loc>https://www.toptier.com.ar/</loc>
 
     <image:image>
-      <image:loc>https://www.toptier.com.ar/img/prod-1.webp</image:loc>
+      <image:loc>https://www.toptier.com.ar/webp/prod-1.webp</image:loc>
       <image:caption>Producción musical estilo trap con mezcla profesional y beats personalizados</image:caption>
     </image:image>
 
     <image:image>
-      <image:loc>https://www.toptier.com.ar/img/video-1.webp</image:loc>
+      <image:loc>https://www.toptier.com.ar/webp/video-1.webp</image:loc>
       <image:caption>Visuales y videoclips para artistas emergentes de música urbana</image:caption>
     </image:image>
 
     <image:image>
-      <image:loc>https://www.toptier.com.ar/img/portada-1.webp</image:loc>
+      <image:loc>https://www.toptier.com.ar/webp/portada-1.webp</image:loc>
       <image:caption>Diseño de portada estilo rage para lanzamientos en Spotify</image:caption>
     </image:image>
 
     <image:image>
-      <image:loc>https://www.toptier.com.ar/img/waizr.webp</image:loc>
+      <image:loc>https://www.toptier.com.ar/webp/waizr.webp</image:loc>
       <image:caption>wa!zr - artista emergente con identidad visual y sonido Top Tier</image:caption>
     </image:image>
 
     <image:image>
-      <image:loc>https://www.toptier.com.ar/img/eztre.webp</image:loc>
+      <image:loc>https://www.toptier.com.ar/webp/eztre.webp</image:loc>
       <image:caption>eztrerightnow - estética hyperpop y energía Detroit en una imagen</image:caption>
     </image:image>
 
@@ -35,3 +35,4 @@
   </url>
 
 </urlset>
+
