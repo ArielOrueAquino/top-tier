@@ -2133,7 +2133,12 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
+      } else {
+        setTimeout(() => {
+          if (!entry.isIntersecting) {
+            entry.target.classList.remove("visible");
+          }
+        }, 2000); // 2 segundos después de salir
       }
     });
   }, {
