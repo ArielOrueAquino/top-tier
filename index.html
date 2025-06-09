@@ -2127,7 +2127,8 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const animLines = document.querySelectorAll(".anim-line");
+  const targets = document.querySelectorAll(".anim-line");
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -2135,9 +2136,11 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.2 });
+  }, {
+    threshold: 0.5
+  });
 
-  animLines.forEach(line => observer.observe(line));
+  targets.forEach(el => observer.observe(el));
 });
 </script></body>
 </html>
