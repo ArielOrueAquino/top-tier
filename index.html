@@ -1863,7 +1863,20 @@
 }
 </script>
 </head>
-<body><p class="visually-hidden">Somos un sello independiente enfocados en hacer música y visuales con criterio de excelencia para artistas que buscan ser TOP TIER.</p><div id="home"></div>
+<body><script>
+(function() {
+  if (location.hash === "#home") {
+    window.addEventListener("load", () => {
+      const target = document.getElementById("home");
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: "smooth" });
+        }, 0);
+      }
+    });
+  }
+})();
+</script><p class="visually-hidden">Somos un sello independiente enfocados en hacer música y visuales con criterio de excelencia para artistas que buscan ser TOP TIER.</p><div id="home"></div>
 <div id="overlay"><img alt="Top Tier Logo" src="webp/top-logo.webp"/></div>
 <div class="top-bar">
 <button class="hamburger" onclick="toggleMenu()">☰</button>
