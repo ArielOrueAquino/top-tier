@@ -2010,23 +2010,8 @@
   Llevamos todo a un nivel top.
 </p>
 </div>
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    if (location.hash === "#home") {
-      const target = document.getElementById("home");
-      if (target) {
-        setTimeout(() => {
-          target.scrollIntoView({ behavior: "smooth" });
-        }, 10);
-      }
-    }
-  });
-</script>
-<script>
-  if (location.hash && location.hash !== "#home") {
-    location.replace(location.origin + location.pathname + "#home");
-  }
-</script>
+
+
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const logoContainer = document.querySelector(".logo-container");
@@ -2048,18 +2033,7 @@
     }
   });
 </script>
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    if (location.hash === "#home") {
-      const target = document.getElementById("home");
-      if (target) {
-        setTimeout(() => {
-          target.scrollIntoView({ behavior: "smooth" });
-        }, 10);
-      }
-    }
-  });
-</script>
+
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -2142,5 +2116,19 @@ document.addEventListener("DOMContentLoaded", () => {
 </article>
 </section>
 </div>
+
+<script>
+  window.addEventListener("load", () => {
+    if (!location.hash || location.hash === "#home") {
+      const homeSection = document.getElementById("home");
+      if (homeSection) {
+        setTimeout(() => {
+          homeSection.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  });
+</script>
+
 </body>
 </html>
