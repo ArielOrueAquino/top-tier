@@ -2134,15 +2134,12 @@ document.addEventListener("DOMContentLoaded", () => {
       if (entry.isIntersecting) {
         entry.target.classList.add("visible");
       } else {
-        setTimeout(() => {
-          if (!entry.isIntersecting) {
-            entry.target.classList.remove("visible");
-          }
-        }, 2000); // 2 segundos después de salir
+        entry.target.classList.remove("visible");
       }
     });
   }, {
-    threshold: 0.5
+    threshold: 1.0,
+    rootMargin: "-40% 0px -40% 0px"
   });
 
   targets.forEach(el => observer.observe(el));
