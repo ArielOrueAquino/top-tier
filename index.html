@@ -2048,7 +2048,7 @@
       [...logoContainer.querySelectorAll("img, span")].forEach(el => {
         el.addEventListener("click", (e) => {
           e.preventDefault();
-          history.pushState(null, null, "#home");
+          location.hash = "#home";
           const target = document.getElementById("home");
           if (target) {
             target.scrollIntoView({ behavior: "smooth" });
