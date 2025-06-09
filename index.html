@@ -1863,20 +1863,7 @@
 }
 </script>
 </head>
-<body><script>
-(function() {
-  if (location.hash === "#home") {
-    window.addEventListener("load", () => {
-      const target = document.getElementById("home");
-      if (target) {
-        setTimeout(() => {
-          target.scrollIntoView({ behavior: "smooth" });
-        }, 0);
-      }
-    });
-  }
-})();
-</script><p class="visually-hidden">Somos un sello independiente enfocados en hacer música y visuales con criterio de excelencia para artistas que buscan ser TOP TIER.</p><div id="home"></div>
+<body><p class="visually-hidden">Somos un sello independiente enfocados en hacer música y visuales con criterio de excelencia para artistas que buscan ser TOP TIER.</p><div id="home"></div>
 <div id="overlay"><img alt="Top Tier Logo" src="webp/top-logo.webp"/></div>
 <div class="top-bar">
 <button class="hamburger" onclick="toggleMenu()">☰</button>
@@ -2023,56 +2010,10 @@
   Llevamos todo a un nivel top.
 </p>
 </div>
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    if (location.hash === "#home") {
-      const target = document.getElementById("home");
-      if (target) {
-        setTimeout(() => {
-          target.scrollIntoView({ behavior: "smooth" });
-        }, 10);
-      }
-    }
-  });
-</script>
-<script>
-  if (location.hash && location.hash !== "#home") {
-    location.replace(location.origin + location.pathname + "#home");
-  }
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const logoContainer = document.querySelector(".logo-container");
-    const nav = document.getElementById("main-nav");
-    if (logoContainer) {
-      [...logoContainer.querySelectorAll("img, span")].forEach(el => {
-        el.addEventListener("click", (e) => {
-          e.preventDefault();
-          location.hash = "#home";
-          const target = document.getElementById("home");
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-          }
-          if (nav && nav.classList.contains("show")) {
-            nav.classList.remove("show");
-          }
-        });
-      });
-    }
-  });
-</script>
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    if (location.hash === "#home") {
-      const target = document.getElementById("home");
-      if (target) {
-        setTimeout(() => {
-          target.scrollIntoView({ behavior: "smooth" });
-        }, 10);
-      }
-    }
-  });
-</script>
+
+
+
+
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -2155,5 +2096,48 @@ document.addEventListener("DOMContentLoaded", () => {
 </article>
 </section>
 </div>
-</body>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      const targetId = this.getAttribute("href");
+      const targetEl = document.querySelector(targetId);
+
+      if (targetEl) {
+        e.preventDefault();
+        history.pushState(null, "", targetId);
+        targetEl.scrollIntoView({ behavior: "smooth" });
+
+        const nav = document.getElementById("main-nav");
+        if (nav?.classList.contains("show")) {
+          nav.classList.remove("show");
+        }
+      }
+    });
+  });
+
+  if (location.hash) {
+    const el = document.querySelector(location.hash);
+    if (el) {
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: "auto" });
+      }, 10);
+    }
+  }
+});
+</script><script>
+document.addEventListener("DOMContentLoaded", () => {
+  const logoContainer = document.querySelector(".logo-container");
+  logoContainer?.addEventListener("click", () => {
+    history.pushState(null, "", "#home");
+    const el = document.getElementById("home");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+
+    const nav = document.getElementById("main-nav");
+    if (nav?.classList.contains("show")) {
+      nav.classList.remove("show");
+    }
+  });
+});
+</script></body>
 </html>
