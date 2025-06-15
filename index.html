@@ -1874,6 +1874,13 @@
   ]
 }
 </script>
+<script>
+  const host = location.hostname;
+  if (host.includes('--toptiermusic.netlify.app')) {
+    location.href = location.href.replace(host, 'www.toptier.com.ar');
+  }
+</script>
+<meta name="robots" content="noindex, nofollow">
 <meta content="#000000" name="theme-color"/></head>
 <body><p class="visually-hidden">Somos un sello independiente enfocados en hacer música y visuales con criterio de excelencia para artistas que buscan ser TOP TIER.</p><div id="home"></div>
 <div id="overlay"><img alt="Top Tier Logo" src="webp/top-logo.webp"/></div>
