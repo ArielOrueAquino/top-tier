@@ -1,6 +1,6 @@
-[context.deploy-preview]
-  [[redirects]]
-    from = "/*"
-    to = "https://www.toptier.com.ar/:splat"
-    status = 301
-    force = true
+[[redirects]]
+  from = "/*"
+  to = "https://www.toptier.com.ar/:splat"
+  status = 301
+  force = true
+  conditions = { Context = "deploy-preview" }
