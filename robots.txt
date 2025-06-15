@@ -1,18 +1,15 @@
-# ✅ Permitir acceso completo a bots principales
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
-# ✅ Permitir todo excepto carpetas irrelevantes para otros bots
 User-agent: *
 Disallow: /cgi-bin/
 Disallow: /tmp/
 Disallow: /junk/
 Allow: /
 
-# 🚫 Bloqueo de bots problemáticos conocidos
 User-agent: MJ12bot
 Disallow: /
 
@@ -28,5 +25,4 @@ Disallow: /
 User-agent: PetalBot
 Disallow: /
 
-# ✅ Sitemap del sitio
 Sitemap: https://www.toptier.com.ar/sitemap.xml
