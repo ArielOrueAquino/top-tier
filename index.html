@@ -2,8 +2,8 @@
 
 <html lang="es">
 <head>
-<link as="font" crossorigin="" href="https://fonts.gstatic.com/s/syne/v23/HAZcqxI8SNy3yR7uQeDfCLLJR9pN.ttf" rel="preload" type="font/ttf"/>
-<link as="font" crossorigin="" href="https://fonts.gstatic.com/s/rubik/v30/iJWKBXyIfDnIV7nBrXyw023e.ttf" rel="preload" type="font/ttf"/>
+
+
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com" rel="dns-prefetch"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -190,7 +190,7 @@
 <section id="nosotros" style="padding: 3rem 1.5rem; border-bottom: 1px solid #333; background-color: rgba(10, 10, 10, 0.9);">
 <h1 id="home" style="font-family: 'Syne', sans-serif; font-size: 2rem; color: #e50914; text-align: center; margin-bottom: 1rem;">
       ACERCA DE NOSOTROS
-    </h1><div class="linea-titulo anim-line" data-aos="zoom-in" data-aos-delay="200"></div><img alt="Estudio musical Top Tier en Barracas, CABA" class="advisory-img" height="300" loading="lazy" src="webp/nosotros.webp" style="margin-top: 2rem; max-width: 1128px; width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;" width="300"/>
+    </h1><div class="linea-titulo anim-line" data-aos="zoom-in" data-aos-delay="200"></div><img alt="Estudio musical Top Tier en Barracas, CABA" class="advisory-img" height="300" src="webp/nosotros.webp" style="margin-top: 2rem; max-width: 1128px; width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;" width="300"/>
 <p class="section-padding" style="max-width: 620px; margin: auto; font-size: 1.2rem; text-align: center; font-family: 'Rubik', sans-serif; margin-top: 2rem;">Somos un sello independiente enfocados en hacer música y visuales con criterio de excelencia para artistas que buscan ser<br/><strong>TOP TIER</strong>.
     </p>
 <p class="visually-hidden">
@@ -409,12 +409,14 @@ window.addEventListener("load", () => {
 });
 </script>
 <!-- SENTRY SDK -->
-<script crossorigin="anonymous" src="https://js.sentry-cdn.com/5b5c018bfc6923a73034e91b3f02f79f.min.js"></script>
+
+
+<!-- SENTRY SDK CORRECTO -->
+<script src="https://js.sentry-cdn.com/f9478b0b4452d273749dd61bf758b49b.min.js" crossorigin="anonymous"></script>
 <script>
   Sentry.init({
-    dsn: "https://5b5c018bfc6923a73034e91b3f02f79f@o4506916242708480.ingest.sentry.io/4506916244146176",
-    integrations: [new Sentry.BrowserTracing()],
-    tracesSampleRate: 1.0,
+    dsn: "https://f9478b0b4452d273749dd61bf758b49b@o4509628496287744.ingest.sentry.io/4509628497956864"
   });
 </script>
+
 </body></html>
